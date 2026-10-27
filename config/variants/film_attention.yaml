@@ -1,0 +1,28 @@
+# Variant 4: FiLM + Cross-Attention Encoding
+
+model:
+  variant: film_attention
+
+  # Embedding dimensions
+  embedding_dims:
+    state: 8
+    commodity: 32
+    flow: 4
+
+  # Cross-attention parameters (same as variant 3)
+  cross_attention:
+    num_heads: 4
+    d_k: 32
+    d_v: 32
+    dropout: 0.0
+
+  # FiLM (Feature-wise Linear Modulation) parameters
+  film:
+    hidden_dim: 64  # Hidden dimension for FiMLP network
+    num_layers: 2  # Number of layers in FiMLP
+
+  # FiLM generates scale and shift parameters conditioned on categorical features
+  # These modulate the time series features before processing
+
+# Note: do not add `data:` here. Variants must not override the base data
+# config — an empty `data:` block parses as `None` and wipes out base.yaml.

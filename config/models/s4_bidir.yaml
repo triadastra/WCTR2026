@@ -1,0 +1,12 @@
+# Same authors' modular S4 recipe as s4.yaml, with a two-sided history kernel.
+model:
+  name: s4_bidir
+  implementation: authors-modular-s4-v1
+  bidirectional: true
+  d_model: 128
+  n_layers: 4
+  d_state: 64
+  n_ssm: 1
+  dt_transform: softplus
+  tie_dropout: true
+  dropout: 0.1

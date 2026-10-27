@@ -1,0 +1,25 @@
+# Exp 1 (single eight-state aggregate series) overrides.
+#
+# Loaded automatically by scripts/train.py and scripts/inference.py whenever
+# --aggregate is passed, AFTER base/model/variant configs. Explicit CLI flags
+# (e.g. --batch-size) still win over this file.
+#
+# Why this exists: base.yaml's batch size is aligned to Exp 2's corrected combo
+# loader (918 kept combos per step). The aggregated series has only 132
+# training windows (first target 2013-01; it was 96 before the burn-in fix),
+# so that batch would empty a drop_last loader.
+#
+# Batch 33 gives four equal updates over all 132 targets. The previous 66
+# retained the historical two-update cadence; neither size was selected by
+# a validation comparison. This change doubles updates per epoch, including
+# the update budget within epoch-based scheduling and stopping patience.
+# Exp 2/3 retain one complete target month per update.
+# Pinned by tests/test_protocol_config.py.
+training:
+  batch_size: 33
+
+# Belt and braces: never drop a partial batch on the aggregate path even if a
+# window/lag override changes the window count (docs/FAIR_BENCHMARK_PROTOCOL.md).
+data:
+  batch_by_target_month: false
+  train_drop_last: false

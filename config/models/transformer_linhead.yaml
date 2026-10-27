@@ -1,0 +1,26 @@
+# Transformer with a linear prediction head (head-matched rerun).
+#
+# Identical to config/models/transformer.yaml except for the head, so the
+# Exp 1/2 Transformer arms read out through the same Linear(128 -> 2) as
+# LSTM/GRU/S4/Mamba. A separate model name keeps these runs out of the
+# published transformer rows; see config/linhead_manifest.env.
+
+model:
+  name: transformer_linhead
+  # The only change from transformer.yaml: Linear(128 -> 2) instead of the MLP head.
+  prediction_head: linear
+
+  # Transformer-specific parameters
+  hidden_size: 128
+  num_layers: 4
+  num_heads: 8
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization)
+  d_ff: 512  # Feed-forward dimension
+  activation: "gelu"  # "relu", "gelu"
+
+  # Position encoding
+  max_seq_len: 1000
+  positional_encoding: "sinusoidal"  # "sinusoidal", "learned"
+
+  # Note: variant is set separately via variant config files. Learning rate is
+  # inherited from base.yaml so no model family receives private tuning.

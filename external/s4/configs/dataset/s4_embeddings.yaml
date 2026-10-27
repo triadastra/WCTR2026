@@ -1,0 +1,4 @@
+_name_: s4_embeddings
+data_dir: null  # controller supplies an absolute DATA_DIR; null means repo in tests
+input_len: 36
+lag_count: 12

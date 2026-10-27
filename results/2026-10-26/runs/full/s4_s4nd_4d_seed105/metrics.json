@@ -1,0 +1,2432 @@
+{
+  "model_measurements": {
+    "parameter_count_kind": "torch parameter elements",
+    "total_parameters": 405122,
+    "trainable_parameters": 405122,
+    "frozen_parameters": 0,
+    "parameter_bytes": 1620488,
+    "buffer_bytes": 128,
+    "tensors": [
+      {
+        "name": "model.layers.0.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.2.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.3.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.2.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.3.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.2.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.3.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.2.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.3.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.0.weight",
+        "shape": [
+          128,
+          28
+        ],
+        "elements": 3584,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.0.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "decoder.0.output_transform.weight",
+        "shape": [
+          2,
+          128
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "decoder.0.output_transform.bias",
+        "shape": [
+          2
+        ],
+        "elements": 2,
+        "dtype": "torch.float32",
+        "trainable": true
+      }
+    ]
+  },
+  "model": "s4nd",
+  "variant": "4d",
+  "aggregate": false,
+  "mode": "one_step_normalized",
+  "seed": 105,
+  "prediction_units": "normalized",
+  "scale_dependent_metric_units": "normalized",
+  "percentage_metric_units": "real",
+  "n_samples": 4590,
+  "predictions_file": "predictions_norm.csv",
+  "checkpoint": "/autodl-fs/data/wctr-20260923-pr27/production-outputs/full/s4_s4nd_4d_seed105/hydra/checkpoints/val/loss.ckpt",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "source_domain": {
+    "states": [
+      "Arkansas",
+      "Illinois",
+      "Iowa",
+      "Louisiana",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Wisconsin"
+    ],
+    "target_measure": "legacy_mixed",
+    "duplicate_audit": {
+      "policy": "error",
+      "groups": 0,
+      "rows": 0,
+      "excess_rows": 0,
+      "conflicting_target_groups": 0
+    },
+    "commodity_universe": "all_hs_chapters",
+    "hs2_codes": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    "source_start": "2008-01-01",
+    "source_end": "2025-05-01",
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "run_contract": {
+    "run_contract_version": 1,
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "identity": {
+      "model": "s4nd",
+      "variant": "4d",
+      "seed": 105,
+      "aggregate": false
+    },
+    "model_config": {
+      "model": {
+        "layer": {
+          "_name_": "s4nd",
+          "d_state": 64,
+          "channels": 1,
+          "bidirectional": true,
+          "activation": "gelu",
+          "final_act": "glu",
+          "initializer": null,
+          "weight_norm": false,
+          "trank": 1,
+          "dropout": 0.1,
+          "tie_dropout": true,
+          "init": "legs",
+          "rank": 1,
+          "dt_min": 0.001,
+          "dt_max": 0.1,
+          "lr": null,
+          "n_ssm": 1,
+          "deterministic": false,
+          "l_max": null,
+          "verbose": true,
+          "linear": false,
+          "dim": 4,
+          "contract_version": 1
+        },
+        "_name_": "model",
+        "prenorm": true,
+        "transposed": false,
+        "n_layers": 4,
+        "d_model": 128,
+        "bidirectional": false,
+        "residual": "R",
+        "pool": {
+          "_name_": "pool",
+          "stride": 1,
+          "expand": null
+        },
+        "norm": "layer",
+        "dropout": 0.1,
+        "tie_dropout": true,
+        "track_norms": true,
+        "encoder": null,
+        "decoder": null
+      },
+      "encoder": [
+        "linear"
+      ],
+      "decoder": {
+        "_name_": "sequence",
+        "mode": "last"
+      },
+      "task": {
+        "_name_": "base",
+        "loss": "mse",
+        "metrics": "mse",
+        "torchmetrics": null
+      },
+      "grid_padding": "fixed-lattice-masked-input-and-layers-v1"
+    },
+    "data_config": {
+      "source_format": "monthly",
+      "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "expected_states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "expected_hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "expected_source_start": "2008-01-01",
+      "expected_source_end": "2025-05-01",
+      "target_measure": "legacy_mixed",
+      "duplicate_policy": "error",
+      "commodity_universe": "all_hs_chapters",
+      "start": "2009-01-01",
+      "end": "2025-05-01",
+      "input_len": 36,
+      "lag_count": 12,
+      "normalize": true,
+      "normalization_method": "minmax",
+      "filter_sparse": true,
+      "min_nonzero_frac": 0.95,
+      "cohort_from_train_only": true,
+      "allow_legacy_full_timeline": false,
+      "tabular_align_targets": true,
+      "tabular_feature_mode": "last_row",
+      "batch_by_target_month": true,
+      "train_drop_last": false,
+      "aggregate": false,
+      "train_target_start": null,
+      "train_end": "2023-12-01",
+      "val_start": "2024-01-01",
+      "val_end": "2024-12-01",
+      "test_start": "2025-01-01",
+      "test_end": "2025-05-01"
+    },
+    "training_config": {
+      "optimizer": {
+        "_name_": "adamw",
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ]
+      },
+      "scheduler": {
+        "_name_": "plateau",
+        "mode": "min",
+        "factor": 0.5,
+        "patience": 15,
+        "min_lr": 0.0
+      },
+      "loader": {
+        "batch_size": 1,
+        "num_workers": 0,
+        "pin_memory": true,
+        "drop_last": false
+      },
+      "loader_train": {
+        "batch_size": 1
+      },
+      "trainer": {
+        "accelerator": "auto",
+        "strategy": "auto",
+        "devices": 1,
+        "accumulate_grad_batches": 1,
+        "max_epochs": 5000,
+        "gradient_clip_val": 1.0,
+        "log_every_n_steps": 10,
+        "limit_train_batches": 1.0,
+        "limit_val_batches": 1.0,
+        "enable_model_summary": false,
+        "precision": 32,
+        "val_check_interval": 1.0,
+        "deterministic": "warn"
+      },
+      "train": {
+        "name": null,
+        "interval": "epoch",
+        "monitor": "val/loss",
+        "mode": "min",
+        "ema": 0.0,
+        "debug": false,
+        "ignore_warnings": false,
+        "state": {
+          "mode": null,
+          "n_context": 0,
+          "n_context_eval": 0
+        },
+        "optimizer_param_grouping": null,
+        "disable_dataset": false,
+        "validate_at_start": false,
+        "pretrained_model_path": null,
+        "pretrained_model_strict_load": true,
+        "pretrained_model_state_hook": {
+          "_name_": null
+        },
+        "post_init_hook": {
+          "_name_": null
+        },
+        "layer_decay": {
+          "_name_": null,
+          "decay": 0.7
+        },
+        "track_grad_norms": false,
+        "max_steps": null
+      },
+      "callbacks": {
+        "learning_rate_monitor": {
+          "logging_interval": "epoch"
+        },
+        "timer": {
+          "step": true,
+          "inter_step": false,
+          "epoch": true,
+          "val": true,
+          "_name_": "timer"
+        },
+        "params": {
+          "total": true,
+          "trainable": true,
+          "fixed": true,
+          "_name_": "params"
+        },
+        "model_checkpoint": {
+          "monitor": "val/loss",
+          "mode": "min",
+          "save_top_k": 1,
+          "save_last": true,
+          "auto_insert_metric_name": false,
+          "verbose": true,
+          "_name_": "model_checkpoint"
+        },
+        "rich_model_summary": {
+          "max_depth": 1,
+          "_name_": "rich_model_summary"
+        },
+        "rich_progress_bar": {
+          "refresh_rate": 1,
+          "leave": true,
+          "_name_": "rich_progress_bar"
+        },
+        "early_stopping": {
+          "monitor": "val/loss",
+          "mode": "min",
+          "patience": 50,
+          "min_delta": 0.0001,
+          "_name_": "early_stopping"
+        }
+      },
+      "loss_reduction": "valid-target-mean-v2",
+      "allow_tf32": false
+    },
+    "selection": {
+      "monitor": "val/loss",
+      "mode": "min"
+    },
+    "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+    "source_domain": {
+      "states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "target_measure": "legacy_mixed",
+      "duplicate_audit": {
+        "policy": "error",
+        "groups": 0,
+        "rows": 0,
+        "excess_rows": 0,
+        "conflicting_target_groups": 0
+      },
+      "commodity_universe": "all_hs_chapters",
+      "hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "source_start": "2008-01-01",
+      "source_end": "2025-05-01",
+      "grid_start": "2009-01-01",
+      "grid_end": "2025-05-01",
+      "train_end": "2023-12-01",
+      "val_start": "2024-01-01",
+      "val_end": "2024-12-01",
+      "test_start": "2025-01-01",
+      "test_end": "2025-05-01"
+    }
+  },
+  "training_completion": {
+    "version": 1,
+    "kind": "upstream_s4",
+    "state": "finished",
+    "stop_reason": "early_stopping",
+    "epochs_run": 163,
+    "best_epoch": 113,
+    "best_val": 0.038081783801317215,
+    "patience_counter": 50,
+    "run_contract": {
+      "run_contract_version": 1,
+      "benchmark_protocol_version": "fair-comparison-v5",
+      "identity": {
+        "model": "s4nd",
+        "variant": "4d",
+        "seed": 105,
+        "aggregate": false
+      },
+      "model_config": {
+        "model": {
+          "layer": {
+            "_name_": "s4nd",
+            "d_state": 64,
+            "channels": 1,
+            "bidirectional": true,
+            "activation": "gelu",
+            "final_act": "glu",
+            "initializer": null,
+            "weight_norm": false,
+            "trank": 1,
+            "dropout": 0.1,
+            "tie_dropout": true,
+            "init": "legs",
+            "rank": 1,
+            "dt_min": 0.001,
+            "dt_max": 0.1,
+            "lr": null,
+            "n_ssm": 1,
+            "deterministic": false,
+            "l_max": null,
+            "verbose": true,
+            "linear": false,
+            "dim": 4,
+            "contract_version": 1
+          },
+          "_name_": "model",
+          "prenorm": true,
+          "transposed": false,
+          "n_layers": 4,
+          "d_model": 128,
+          "bidirectional": false,
+          "residual": "R",
+          "pool": {
+            "_name_": "pool",
+            "stride": 1,
+            "expand": null
+          },
+          "norm": "layer",
+          "dropout": 0.1,
+          "tie_dropout": true,
+          "track_norms": true,
+          "encoder": null,
+          "decoder": null
+        },
+        "encoder": [
+          "linear"
+        ],
+        "decoder": {
+          "_name_": "sequence",
+          "mode": "last"
+        },
+        "task": {
+          "_name_": "base",
+          "loss": "mse",
+          "metrics": "mse",
+          "torchmetrics": null
+        },
+        "grid_padding": "fixed-lattice-masked-input-and-layers-v1"
+      },
+      "data_config": {
+        "source_format": "monthly",
+        "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+        "expected_states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "expected_hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "expected_source_start": "2008-01-01",
+        "expected_source_end": "2025-05-01",
+        "target_measure": "legacy_mixed",
+        "duplicate_policy": "error",
+        "commodity_universe": "all_hs_chapters",
+        "start": "2009-01-01",
+        "end": "2025-05-01",
+        "input_len": 36,
+        "lag_count": 12,
+        "normalize": true,
+        "normalization_method": "minmax",
+        "filter_sparse": true,
+        "min_nonzero_frac": 0.95,
+        "cohort_from_train_only": true,
+        "allow_legacy_full_timeline": false,
+        "tabular_align_targets": true,
+        "tabular_feature_mode": "last_row",
+        "batch_by_target_month": true,
+        "train_drop_last": false,
+        "aggregate": false,
+        "train_target_start": null,
+        "train_end": "2023-12-01",
+        "val_start": "2024-01-01",
+        "val_end": "2024-12-01",
+        "test_start": "2025-01-01",
+        "test_end": "2025-05-01"
+      },
+      "training_config": {
+        "optimizer": {
+          "_name_": "adamw",
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ]
+        },
+        "scheduler": {
+          "_name_": "plateau",
+          "mode": "min",
+          "factor": 0.5,
+          "patience": 15,
+          "min_lr": 0.0
+        },
+        "loader": {
+          "batch_size": 1,
+          "num_workers": 0,
+          "pin_memory": true,
+          "drop_last": false
+        },
+        "loader_train": {
+          "batch_size": 1
+        },
+        "trainer": {
+          "accelerator": "auto",
+          "strategy": "auto",
+          "devices": 1,
+          "accumulate_grad_batches": 1,
+          "max_epochs": 5000,
+          "gradient_clip_val": 1.0,
+          "log_every_n_steps": 10,
+          "limit_train_batches": 1.0,
+          "limit_val_batches": 1.0,
+          "enable_model_summary": false,
+          "precision": 32,
+          "val_check_interval": 1.0,
+          "deterministic": "warn"
+        },
+        "train": {
+          "name": null,
+          "interval": "epoch",
+          "monitor": "val/loss",
+          "mode": "min",
+          "ema": 0.0,
+          "debug": false,
+          "ignore_warnings": false,
+          "state": {
+            "mode": null,
+            "n_context": 0,
+            "n_context_eval": 0
+          },
+          "optimizer_param_grouping": null,
+          "disable_dataset": false,
+          "validate_at_start": false,
+          "pretrained_model_path": null,
+          "pretrained_model_strict_load": true,
+          "pretrained_model_state_hook": {
+            "_name_": null
+          },
+          "post_init_hook": {
+            "_name_": null
+          },
+          "layer_decay": {
+            "_name_": null,
+            "decay": 0.7
+          },
+          "track_grad_norms": false,
+          "max_steps": null
+        },
+        "callbacks": {
+          "learning_rate_monitor": {
+            "logging_interval": "epoch"
+          },
+          "timer": {
+            "step": true,
+            "inter_step": false,
+            "epoch": true,
+            "val": true,
+            "_name_": "timer"
+          },
+          "params": {
+            "total": true,
+            "trainable": true,
+            "fixed": true,
+            "_name_": "params"
+          },
+          "model_checkpoint": {
+            "monitor": "val/loss",
+            "mode": "min",
+            "save_top_k": 1,
+            "save_last": true,
+            "auto_insert_metric_name": false,
+            "verbose": true,
+            "_name_": "model_checkpoint"
+          },
+          "rich_model_summary": {
+            "max_depth": 1,
+            "_name_": "rich_model_summary"
+          },
+          "rich_progress_bar": {
+            "refresh_rate": 1,
+            "leave": true,
+            "_name_": "rich_progress_bar"
+          },
+          "early_stopping": {
+            "monitor": "val/loss",
+            "mode": "min",
+            "patience": 50,
+            "min_delta": 0.0001,
+            "_name_": "early_stopping"
+          }
+        },
+        "loss_reduction": "valid-target-mean-v2",
+        "allow_tf32": false
+      },
+      "selection": {
+        "monitor": "val/loss",
+        "mode": "min"
+      },
+      "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "source_domain": {
+        "states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "target_measure": "legacy_mixed",
+        "duplicate_audit": {
+          "policy": "error",
+          "groups": 0,
+          "rows": 0,
+          "excess_rows": 0,
+          "conflicting_target_groups": 0
+        },
+        "commodity_universe": "all_hs_chapters",
+        "hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "source_start": "2008-01-01",
+        "source_end": "2025-05-01",
+        "grid_start": "2009-01-01",
+        "grid_end": "2025-05-01",
+        "train_end": "2023-12-01",
+        "val_start": "2024-01-01",
+        "val_end": "2024-12-01",
+        "test_start": "2025-01-01",
+        "test_end": "2025-05-01"
+      }
+    },
+    "checkpoint_sha256": "d49ad2b50d8e6c22cd53fc6fb8818baa9c85bb399a7eaaf5b6332d1061e57840"
+  },
+  "architecture": {
+    "class": "s4nd",
+    "n_layers": 4,
+    "d_state": 64,
+    "bidirectional": true,
+    "dim": 4
+  },
+  "cohort": {
+    "protocol_version": "train-only-cohort-v1",
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "cohort_from_train_only": true,
+    "num_combos": 918
+  },
+  "data_protocol": {
+    "input_len": 36,
+    "lag_count": 12,
+    "train_target_start": null
+  },
+  "metrics": {
+    "value_mse": 0.038019760094747314,
+    "weight_mse": 0.06244039131780523,
+    "mae": 0.1158151423116781,
+    "value_mae": 0.11965689096655108,
+    "weight_mae": 0.11197339365680511,
+    "rmse": 0.2224336590395488,
+    "value_rmse": 0.19498656388261043,
+    "weight_rmse": 0.24988075419648714,
+    "r2": 0.5118341785577243,
+    "value_r2": 0.5809679240629344,
+    "weight_r2": 0.44270043305251405,
+    "value_mape": 150.97926769262912,
+    "weight_mape": 325.6806905947143,
+    "smape": 46.61633691309008,
+    "value_smape": 44.38469958961096,
+    "weight_smape": 48.84797423656919,
+    "norm_mse_combined": 0.050230075706276266,
+    "num_params": 405122,
+    "value_mase": 0.9157002734546781,
+    "weight_mase": 0.8551594045396536,
+    "mase": 0.8854298389971658,
+    "value_rmsse": 0.7459178556860098,
+    "weight_rmsse": 0.6932341776891016,
+    "rmsse": 0.7195760166875557
+  }
+}

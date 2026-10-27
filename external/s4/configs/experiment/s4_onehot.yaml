@@ -1,0 +1,72 @@
+# @package _global_
+defaults:
+  - /trainer: default
+  - /loader: default
+  - /task: regression
+  - /optimizer: adamw
+  - /scheduler: plateau
+  - /model: s4
+  - /dataset: s4_onehot_u
+
+encoder:
+  - linear
+
+decoder:
+  _name_: sequence
+  mode: last
+
+model:
+  n_layers: 4
+  d_model: 128  # standardized to 128 to capacity-match the github baselines (was 256)
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization)
+  prenorm: true
+  transposed: false
+  layer:
+    _name_: s4
+    d_state: 64  # S4-family state size, aligned at 64 across the local S4 backbone and every hydra S4/S4ND arm (author decision 2026-09-13; recorded hydra runs used 128)
+    bidirectional: false
+
+# batch_size 918 is COUPLED to the sparse-combo cohort, like
+# config/base.yaml's training.batch_size. One sample here is a (combo, month)
+# pair, so 918 = one month's worth of targets: the flat train set is
+# 918 combos x 132 train target months = 121,176 samples -> exactly 132
+# steps/epoch, one whole month per gradient step, matching the github arms.
+# The legacy full-timeline cohort had 903; reproducing those runs needs BOTH
+# 903 here and data.cohort_from_train_only=false on the github side.
+loader:
+  batch_size: 918
+  num_workers: 0
+  drop_last: false
+loader_train:
+  batch_size: 918
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-4
+
+train:
+  monitor: val/loss
+  mode: min
+  interval: epoch
+  max_steps: null
+  test: true
+  seed: 1337
+
+trainer:
+  # 200 to match the s4nd siblings. This was 10, so a standalone run -- the one
+  # the README documents, `cd external/s4 && python train.py experiment=s4_...`
+  # -- trained S4 for TEN epochs against arms that get 5,000 with patience 50.
+  # The sweep protocol still comes from scripts/run_full_test.sh, which
+  # overrides this to 5000 and adds the +callbacks.early_stopping.* block; this
+  # file alone does not configure early stopping.
+  max_epochs: 200
+  accelerator: auto
+  devices: 1
+  precision: 32  # fp32 across the sweep (was 16) — removes the fp16-vs-fp32 confound vs the github models
+  val_check_interval: 1.0
+
+dataset:
+  _name_: s4_onehot_u
+  data_dir: null  # controller supplies an absolute DATA_DIR
+  input_len: 36
+  lag_count: 12

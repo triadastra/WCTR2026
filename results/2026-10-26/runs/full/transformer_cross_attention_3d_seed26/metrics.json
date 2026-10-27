@@ -1,0 +1,1503 @@
+{
+  "model": "transformer",
+  "variant": "cross_attention_3d",
+  "aggregate": false,
+  "mode": "one_step_normalized",
+  "prediction_units": "normalized",
+  "scale_dependent_metric_units": "normalized",
+  "percentage_metric_units": "real",
+  "seed": 26,
+  "n_samples": 4590,
+  "predictions_file": "predictions.csv",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "source_domain": {
+    "states": [
+      "Arkansas",
+      "Illinois",
+      "Iowa",
+      "Louisiana",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Wisconsin"
+    ],
+    "target_measure": "legacy_mixed",
+    "duplicate_audit": {
+      "policy": "error",
+      "groups": 0,
+      "rows": 0,
+      "excess_rows": 0,
+      "conflicting_target_groups": 0
+    },
+    "commodity_universe": "all_hs_chapters",
+    "hs2_codes": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    "source_start": "2008-01-01",
+    "source_end": "2025-05-01",
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "run_contract": {
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "data_config": {
+      "batch_by_target_month": true,
+      "cohort_from_train_only": true,
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_policy": "error",
+      "end": "2025-05-01",
+      "expected_hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "expected_source_end": "2025-05-01",
+      "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "expected_source_start": "2008-01-01",
+      "expected_states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "input_len": 36,
+      "lag_count": 12,
+      "normalization_method": "minmax",
+      "normalize": true,
+      "source_format": "monthly",
+      "start": "2009-01-01",
+      "tabular_align_targets": true,
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_end": "2023-12-01",
+      "train_target_start": null,
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "identity": {
+      "aggregate": false,
+      "model": "transformer",
+      "seed": 26,
+      "variant": "cross_attention_3d"
+    },
+    "model_config": {
+      "activation": "gelu",
+      "bidirectional": false,
+      "categorical_protocol": "matched_s4nd",
+      "cross_attention": {
+        "dropout": 0.0
+      },
+      "d_ff": 512,
+      "dropout": 0.1,
+      "embedding_dims": {
+        "commodity": 32,
+        "flow": 2,
+        "state": 8
+      },
+      "hidden_size": 128,
+      "max_seq_len": 1000,
+      "name": "transformer",
+      "num_heads": 8,
+      "num_layers": 4,
+      "positional_encoding": "sinusoidal",
+      "variant": "cross_attention_3d"
+    },
+    "numerics": {
+      "allow_tf32": false
+    },
+    "run_contract_version": 1,
+    "selection": {
+      "mode": "min",
+      "monitor": "val_loss"
+    },
+    "source_domain": {
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_audit": {
+        "conflicting_target_groups": 0,
+        "excess_rows": 0,
+        "groups": 0,
+        "policy": "error",
+        "rows": 0
+      },
+      "grid_end": "2025-05-01",
+      "grid_start": "2009-01-01",
+      "hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "source_end": "2025-05-01",
+      "source_start": "2008-01-01",
+      "states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_end": "2023-12-01",
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+    "training_config": {
+      "batch_size": 1,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "device": "cuda",
+      "epochs": 5000,
+      "eps": 1e-08,
+      "grad_clip": true,
+      "grad_clip_norm": 1.0,
+      "lr": 0.0001,
+      "min_delta": 0.0001,
+      "optimizer": "adamw",
+      "patience": 50,
+      "scheduler": "reduce_on_plateau",
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 15,
+      "use_amp": false,
+      "weight_decay": 0.0001,
+      "weight_decay_exempt": true
+    }
+  },
+  "training_completion": {
+    "version": 1,
+    "state": "finished",
+    "stop_reason": "early_stopping",
+    "epochs_run": 66,
+    "best_epoch": 36,
+    "best_val": 0.03844266987054696,
+    "patience_counter": 50,
+    "run_contract": {
+      "numerics": {
+        "allow_tf32": false
+      },
+      "run_contract_version": 1,
+      "benchmark_protocol_version": "fair-comparison-v5",
+      "identity": {
+        "model": "transformer",
+        "variant": "cross_attention_3d",
+        "seed": 26,
+        "aggregate": false
+      },
+      "model_config": {
+        "activation": "gelu",
+        "bidirectional": false,
+        "categorical_protocol": "matched_s4nd",
+        "cross_attention": {
+          "dropout": 0.0
+        },
+        "d_ff": 512,
+        "dropout": 0.1,
+        "embedding_dims": {
+          "commodity": 32,
+          "flow": 2,
+          "state": 8
+        },
+        "hidden_size": 128,
+        "max_seq_len": 1000,
+        "name": "transformer",
+        "num_heads": 8,
+        "num_layers": 4,
+        "positional_encoding": "sinusoidal",
+        "variant": "cross_attention_3d"
+      },
+      "data_config": {
+        "batch_by_target_month": true,
+        "cohort_from_train_only": true,
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_policy": "error",
+        "end": "2025-05-01",
+        "expected_hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "expected_source_end": "2025-05-01",
+        "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+        "expected_source_start": "2008-01-01",
+        "expected_states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "input_len": 36,
+        "lag_count": 12,
+        "normalization_method": "minmax",
+        "normalize": true,
+        "source_format": "monthly",
+        "start": "2009-01-01",
+        "tabular_align_targets": true,
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_end": "2023-12-01",
+        "train_target_start": null,
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      },
+      "training_config": {
+        "batch_size": 1,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "device": "cuda",
+        "epochs": 5000,
+        "eps": 1e-08,
+        "grad_clip": true,
+        "grad_clip_norm": 1.0,
+        "lr": 0.0001,
+        "min_delta": 0.0001,
+        "optimizer": "adamw",
+        "patience": 50,
+        "scheduler": "reduce_on_plateau",
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 15,
+        "use_amp": false,
+        "weight_decay": 0.0001,
+        "weight_decay_exempt": true
+      },
+      "selection": {
+        "monitor": "val_loss",
+        "mode": "min"
+      },
+      "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "source_domain": {
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_audit": {
+          "conflicting_target_groups": 0,
+          "excess_rows": 0,
+          "groups": 0,
+          "policy": "error",
+          "rows": 0
+        },
+        "grid_end": "2025-05-01",
+        "grid_start": "2009-01-01",
+        "hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "source_end": "2025-05-01",
+        "source_start": "2008-01-01",
+        "states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_end": "2023-12-01",
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      }
+    },
+    "checkpoint_sha256": "2f3c54645ccb2195e7404f73fd55f70d0acd53a7ea684b371937c1893ebf3aba"
+  },
+  "cohort": {
+    "protocol_version": "train-only-cohort-v1",
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "cohort_from_train_only": true,
+    "num_combos": 918
+  },
+  "data_protocol": {
+    "input_len": 36,
+    "lag_count": 12,
+    "train_target_start": null
+  },
+  "checkpoint": "outputs/full/transformer_cross_attention_3d_seed26/best.pth",
+  "model_measurements": {
+    "parameter_count_kind": "torch parameter elements",
+    "total_parameters": 908486,
+    "trainable_parameters": 908486,
+    "frozen_parameters": 0,
+    "parameter_bytes": 3633944,
+    "buffer_bytes": 545936,
+    "tensors": [
+      {
+        "name": "group_encoder.flow_embedding.weight",
+        "shape": [
+          2,
+          2
+        ],
+        "elements": 4,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.in_proj.weight",
+        "shape": [
+          128,
+          30
+        ],
+        "elements": 3840,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.in_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.0.q_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.0.k_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.0.v_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.0.out_norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.0.out_norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.1.q_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.1.k_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.1.v_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.1.out_norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "axial.ca.1.out_norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "in_proj_raw.weight",
+        "shape": [
+          128,
+          30
+        ],
+        "elements": 3840,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "in_proj_raw.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "post_norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "post_norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.self_attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.self_attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.self_attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.self_attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.linear1.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.linear1.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.linear2.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.linear2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.norm1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.norm1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.norm2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.0.norm2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.self_attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.self_attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.self_attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.self_attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.linear1.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.linear1.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.linear2.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.linear2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.norm1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.norm1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.norm2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.1.norm2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.self_attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.self_attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.self_attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.self_attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.linear1.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.linear1.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.linear2.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.linear2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.norm1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.norm1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.norm2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.2.norm2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.self_attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.self_attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.self_attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.self_attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.linear1.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.linear1.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.linear2.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.linear2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.norm1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.norm1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.norm2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "transformer_encoder.layers.3.norm2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_layer.0.weight",
+        "shape": [
+          64,
+          128
+        ],
+        "elements": 8192,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_layer.0.bias",
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_layer.3.weight",
+        "shape": [
+          2,
+          64
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_layer.3.bias",
+        "shape": [
+          2
+        ],
+        "elements": 2,
+        "dtype": "torch.float32",
+        "trainable": true
+      }
+    ]
+  },
+  "architecture": {
+    "class": "TransformerComboAxial",
+    "variant": "cross_attention_3d",
+    "num_params": 908486,
+    "bidirectional": true,
+    "architecture_versions": {}
+  },
+  "metrics": {
+    "value_mse": 0.0393273372279968,
+    "weight_mse": 0.06410863348606019,
+    "mae": 0.11890964481400793,
+    "value_mae": 0.12397630014530361,
+    "weight_mae": 0.11384298948271224,
+    "rmse": 0.22575402031298025,
+    "value_rmse": 0.19831121306672703,
+    "weight_rmse": 0.25319682755923345,
+    "r2": 0.49718370898588854,
+    "value_r2": 0.5665565558894391,
+    "weight_r2": 0.427810862082338,
+    "value_mape": 156.57416946775712,
+    "weight_mape": 295.2769311377563,
+    "smape": 46.976365253742536,
+    "value_smape": 45.47907400990345,
+    "weight_smape": 48.47365649758162,
+    "norm_mse_combined": 0.05171798535702849,
+    "value_mase": 0.952754339365907,
+    "weight_mase": 0.865448291785627,
+    "mase": 0.909101315575767,
+    "value_rmsse": 0.7695421204926643,
+    "weight_rmsse": 0.703096669671329,
+    "rmsse": 0.7363193950819966,
+    "num_params": 908486
+  }
+}

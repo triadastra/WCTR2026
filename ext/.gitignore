@@ -1,0 +1,5 @@
+# ext/ tracks CODE only.
+# Generated artifacts stay local.
+outputs/
+__pycache__/
+*.pyc

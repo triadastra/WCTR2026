@@ -1,0 +1,16 @@
+# Variant: Axial cross-attention by dimension (S4ND-style 2d)
+# Attends separately along each lattice axis:
+#   2d -> State; 3d -> State+Commodity; 4d -> State+Commodity+Flow
+# dims is derived from the variant name in make_gru/make_lstm.
+# Information protocol matches s4nd_2d: State is structural, so Commodity and
+# Flow are re-injected as embeddings (base.yaml: 32 / 2), as s4nd does with its
+# cfid encoder. Identical to the matched_axial_2d alias.
+
+model:
+  variant: cross_attention_2d
+  categorical_protocol: matched_s4nd
+
+  cross_attention:
+    dropout: 0.0
+
+# Do not add a 'data:' block here (an empty one parses as None and wipes base).

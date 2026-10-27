@@ -1,0 +1,21 @@
+# GPT with a linear prediction head (head-matched rerun).
+#
+# Identical to config/models/gpt.yaml except for the head, so the
+# Exp 1/2 GPT arms read out through the same Linear(128 -> 2) as
+# LSTM/GRU/S4/Mamba. A separate model name keeps these runs out of the
+# published gpt rows; see config/linhead_manifest.env.
+
+model:
+  name: gpt_linhead
+  # The only change from gpt.yaml: Linear(128 -> 2) instead of the MLP head.
+  prediction_head: linear
+
+  # GPT architecture (capacity-matched to baselines at d_model=128)
+  d_model: 128
+  nhead: 8
+  num_layers: 4
+  mlp_ratio: 4.0   # MLP hidden = d_model * mlp_ratio = 512 (matches Transformer d_ff)
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization)
+
+  # Note: variant (onehot | embeddings) is set via config/variants/*.yaml.
+  # GPT has no combo (cross_attention / film_attention) variant in the paper.

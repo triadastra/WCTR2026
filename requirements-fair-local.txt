@@ -1,0 +1,13 @@
+# Local Python 3.12 verification environment. Final Linux CUDA environment
+# must record its own complete package lock before benchmark execution.
+torch==2.9.1
+numpy==1.26.4
+pandas==2.3.0
+pyyaml==6.0.2
+scikit-learn==1.5.2
+matplotlib==3.8.4
+xgboost==3.2.0
+lightgbm==4.6.0
+einops==0.8.0
+pytest
+tqdm

@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "Please cite the WCTR 2026 paper when using this benchmark."
+title: "Multidimensional Demand Forecasting using State Space Models"
+type: software
+repository-code: "https://github.com/triadastra/WCTR2026"
+license: MIT
+authors:
+  - family-names: Fan
+    given-names: Cheng-Jui
+  - family-names: Hsu
+    given-names: Yi-Wen
+  - family-names: Li
+    given-names: Emma Jiahui
+  - family-names: Qiu
+    given-names: Renjie
+  - family-names: Aristov
+    given-names: Nikolay
+  - family-names: Zhou
+    given-names: Sicai
+  - family-names: Dugundji
+    given-names: Elenna R.
+preferred-citation:
+  type: conference-paper
+  title: "Multidimensional Demand Forecasting using State Space Models"
+  conference:
+    name: "World Conference on Transport Research (WCTR 2026)"
+    city: Toulouse
+    country: FR
+  year: 2026
+  authors:
+    - family-names: Fan
+      given-names: Cheng-Jui
+    - family-names: Hsu
+      given-names: Yi-Wen
+    - family-names: Li
+      given-names: Emma Jiahui
+    - family-names: Qiu
+      given-names: Renjie
+    - family-names: Aristov
+      given-names: Nikolay
+    - family-names: Zhou
+      given-names: Sicai
+    - family-names: Dugundji
+      given-names: Elenna R.

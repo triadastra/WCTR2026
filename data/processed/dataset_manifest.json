@@ -1,0 +1,173 @@
+{
+  "dataset": "HS2 monthly aggregated research benchmark",
+  "version": "2026-09-13",
+  "source_fingerprint": "e5c6610ff4d751fa18e313b06fed04b6c3846ee0d1776417b2b68af4f99a264d",
+  "source_files": [
+    {
+      "flow": "imports",
+      "name": "Arkansas2.csv",
+      "bytes": 5697235,
+      "sha256": "5d266e6a1faf8aee64c9b9f746bfe51ae24e2384cb5df6285f84d974f7a1e77c"
+    },
+    {
+      "flow": "imports",
+      "name": "Illinois2.csv",
+      "bytes": 15713077,
+      "sha256": "ce5c23843306fbf2f844323d7d5ef731ea4d33e574dddea17874dd461310f6c7"
+    },
+    {
+      "flow": "imports",
+      "name": "Iowa2.csv",
+      "bytes": 6643987,
+      "sha256": "34ca9e4c003242d5da0e7af2f59902fb2b49c019414d8a2804bf10081a7480c3"
+    },
+    {
+      "flow": "imports",
+      "name": "Louisiana2.csv",
+      "bytes": 8005118,
+      "sha256": "53824854c429a62b38fa73c67e4651f617f766c9e24fe03c7d5ac49b46d6fb74"
+    },
+    {
+      "flow": "imports",
+      "name": "Minnesota2.csv",
+      "bytes": 8568189,
+      "sha256": "42446189fb30bd7597806dbb62d1193612a23d9dcfcba22c99dc864a7e695716"
+    },
+    {
+      "flow": "imports",
+      "name": "Mississippi2.csv",
+      "bytes": 6851017,
+      "sha256": "3d6b52f0fac803ca3671148dd08e5dd455abf6371736858391a85e0c4089dd42"
+    },
+    {
+      "flow": "imports",
+      "name": "Missouri2.csv",
+      "bytes": 9482801,
+      "sha256": "579a1372ce6f45a4e591d326f9b31e65e1c3ad4787259c69bbf9509ecb41b798"
+    },
+    {
+      "flow": "imports",
+      "name": "Wisconsin2.csv",
+      "bytes": 9160496,
+      "sha256": "510a2325e8a311ae32d7d88f6bb2b77060ee7ffbfc0738f5710a8927df157daf"
+    },
+    {
+      "flow": "exports",
+      "name": "ArkansasV2.csv",
+      "bytes": 7108816,
+      "sha256": "f4e7f54a6e0cc12a700073946e95ca10657b190ef3d1614a773d076c214fdd0e"
+    },
+    {
+      "flow": "exports",
+      "name": "Illinoisv2.csv",
+      "bytes": 17629176,
+      "sha256": "0ef13602e73243aef8e71f8b17011d81d3116798c6436420f70bf9a0cdda91c7"
+    },
+    {
+      "flow": "exports",
+      "name": "Iowav2.csv",
+      "bytes": 8979275,
+      "sha256": "baa8d76d334740311e423bb0fd52cea0fd296973201d4aae6150ed64c8c8ad50"
+    },
+    {
+      "flow": "exports",
+      "name": "Louisianav2.csv",
+      "bytes": 9884863,
+      "sha256": "a53caae00f52cbdf065f85cfc8d643284b2ede9b84d48ecd5c4d57d9e66b75d8"
+    },
+    {
+      "flow": "exports",
+      "name": "Minnesotav2.csv",
+      "bytes": 12036974,
+      "sha256": "afd62f7083e8a2340a95fe980b514519efed80e83a999c27d4b6c18c3ff25b71"
+    },
+    {
+      "flow": "exports",
+      "name": "Mississippiv2.csv",
+      "bytes": 8277540,
+      "sha256": "48995509f5f220d545c53d2916f3375713c5a96001433db0d5298f7c645f9a4e"
+    },
+    {
+      "flow": "exports",
+      "name": "Missouriv2.csv",
+      "bytes": 11692264,
+      "sha256": "67e8abd897b81887e470adbb57171433b59b39cec99211821e01dd343b19220b"
+    },
+    {
+      "flow": "exports",
+      "name": "Wisconsinv2.csv",
+      "bytes": 13323981,
+      "sha256": "b860b01a20122913b1d2fa083f50d549263d85d08ece3b9cbdd14a4b8f3aa432"
+    }
+  ],
+  "grain": [
+    "State",
+    "Commodity",
+    "Import/Export",
+    "Time"
+  ],
+  "calendar": {
+    "start": "2008-01-01",
+    "end": "2025-05-01"
+  },
+  "experiment_calendar": {
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "counts": {
+    "source_rows": 1005427,
+    "unique_report_rows": 1003177,
+    "monthly_rows": 322278,
+    "series": 1542,
+    "months": 209,
+    "zero_filled_monthly_rows": 64026,
+    "duplicate_groups": 2250,
+    "conflicting_duplicate_groups": 2198,
+    "unchanged_selected_measure_pairs": 52,
+    "model_calendar_rows": 303774
+  },
+  "target_measure": "legacy_mixed",
+  "aggregation": "sum every source record once, including repeated report keys, then sum countries within state/commodity/flow/month",
+  "imports": {
+    "Value": "Vessel Value ($US)",
+    "Weight": "Vessel SWT (kg)"
+  },
+  "exports": {
+    "Value": "Containerized Vessel Total Exports Value ($US)",
+    "Weight": "Containerized Vessel Total Exports SWT (kg)"
+  },
+  "units": {
+    "Value": "USD",
+    "Weight": "kg"
+  },
+  "missing_values": "Blank selected source cells become zero. Absent monthly cells become zero. SourceRows=0 identifies absent monthly records; MissingValueRows/MissingWeightRows count source blanks.",
+  "normalization": "None. Fit transformations on training data only.",
+  "cohort_filter": "None. All observed state/commodity/flow series are retained; apply the existing training-only cohort rule when needed.",
+  "limitations": [
+    "Mixed import/export measures remain deliberate.",
+    "Summation is a benchmark convention, not independent evidence that conflicting reports are additive.",
+    "Zero-filled values are preprocessing choices, not independently confirmed no-trade observations."
+  ],
+  "validation": {
+    "original_hashes_match": true,
+    "unique_monthly_keys": true,
+    "two_stage_aggregation_exact_match": true,
+    "all_integer_totals_conserved": true,
+    "current_loader_model_grid_exact_match": true
+  },
+  "outputs": {
+    "hs2_monthly_aggregated.csv": {
+      "sha256": "585abc646e62283dca0f27854d73d60814cdae6ab64b12e545f7a84f317287fb",
+      "bytes": 29746226
+    },
+    "duplicate_aggregation_audit.csv": {
+      "sha256": "97eb9bf583b086629e60302a3db8613441f319a5b2a7fc174ffcc8f3c6eb431e",
+      "bytes": 294112
+    }
+  }
+}

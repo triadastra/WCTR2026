@@ -1,0 +1,30 @@
+# Random Forest model configuration
+
+data:
+  tabular_feature_mode: window
+
+model:
+  name: random_forest
+
+  # Bagging counterpart to the two boosting arms (xgboost, lightgbm). Present so
+  # the benchmark can separate "trees behave this way on this panel" from
+  # "boosting behaves this way" -- with only boosting arms the two are
+  # confounded.
+  n_estimators: 300
+
+  # Unbounded depth with a leaf-size floor is the standard RF regression recipe:
+  # bagging controls variance through averaging, not through depth limits.
+  max_depth: null
+  min_samples_leaf: 2
+
+  # Breiman's p/3 for regression. sklearn defaults to 1.0 (every feature at
+  # every split), which removes the decorrelation that makes bagging work and is
+  # much slower at this feature count.
+  max_features: 0.33
+
+  # Hardware
+  n_jobs: -1
+
+  # Note: variant is set separately via variant config files.
+  # embeddings = integer IDs (ordinal to sklearn -- see src/models/random_forest.py);
+  # onehot = indicator columns, which forests handle exactly.

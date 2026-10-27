@@ -1,0 +1,224 @@
+# Base configuration for WCTRS2026
+
+model:
+  name: null  # Overridden per model
+  variant: null  # "onehot", "embeddings", "cross_attention", "film_attention"
+
+  # Architecture parameters
+  hidden_size: 128
+  num_layers: 4
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization)
+  bidirectional: false
+
+  # Embedding dimensions (for variants that use embeddings)
+  embedding_dims:
+    state: 8
+    commodity: 32
+    flow: 2  # Paper uses 2 (Import/Export only). See docs/MODEL_DIFFS.md.
+
+data:
+  # Data paths
+  imports_dir: data/imports
+  exports_dir: data/exports
+  source_format: monthly
+  aggregated_csv: data/processed/hs2_monthly_aggregated.csv
+  # SHA-256 over the consumed monthly CSV logical file manifest. Original
+  # report lineage remains in data/processed/dataset_manifest.json.
+  expected_source_fingerprint: "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb"
+  expected_states:
+    - Arkansas
+    - Illinois
+    - Iowa
+    - Louisiana
+    - Minnesota
+    - Mississippi
+    - Missouri
+    - Wisconsin
+  # Exact two-digit Harmonized System chapter domain exposed by the Census
+  # original reports. Chapter 77 is reserved and chapter 99 is absent.
+  expected_hs2_codes: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98"]
+  expected_source_start: "2008-01-01"
+  expected_source_end: "2025-05-01"
+
+  # Preserve the released mixed measures. Original repeated records have
+  # already been summed; any repeated monthly key now fails closed.
+  target_measure: "legacy_mixed"
+  duplicate_policy: "error"
+  batch_by_target_month: true
+  # The source reports span all represented two-digit HS chapters. There is no
+  # agricultural commodity filter, so the benchmark is all merchandise.
+  commodity_universe: "all_hs_chapters"
+
+  # Date range.
+  #
+  # The raw CSVs go back to 2008-01 (a complete year: 12 months, 55,635 rows).
+  # Starting at 2009-01 is a DELIBERATE SCOPE CHOICE, not an oversight, and not
+  # a leakage concern -- 2008 is the earliest data, so it can only ever be
+  # history. Recorded here because the alternative was measured and rejected:
+  #
+  #   start 2009-01 (this)  cohort 918  first target 2013-01  121,176 train targets
+  #   start 2008-01         cohort 918  first target 2012-01  132,192 train targets
+  #
+  # The 2008 option would add ~9% training data by letting 2008 serve purely as
+  # a lag source (never a window row, never a target, excluded from the cohort
+  # filter's measurement window). It was declined: the marginal gain is small
+  # next to the 38% recovered by the burn-in fix, and it would decouple the grid
+  # start from the filter's measurement start -- the same class of subtlety that
+  # produced the burn-in defect. Revisit only if training-data volume is shown
+  # to bind. See debug.md R33.
+  start: "2009-01-01"
+  end: "2025-05-01"
+
+  # Sequence parameters
+  input_len: 36  # Number of months to look back
+  lag_count: 12  # Number of lag features
+
+  # Normalization
+  normalize: true
+  # The canonical inverse transform is min-max. Unsupported names fail closed
+  # instead of being silently ignored by the pipeline.
+  normalization_method: "minmax"
+
+  # Corrected default: freeze the evaluated cohort using train data only.
+  # False is rejected because full-timeline filtering leaks held-out data.
+  cohort_from_train_only: true
+
+  # Cross-family fairness for the tree arms (xgboost/lightgbm/random_forest).
+  # false = trees fit on every target their 2-row feature
+  #   construction allows: first train target 2010-02, 153,306 rows.
+  # true = trees fit on the SAME target set as the windowed arms (first train
+  #   target 2013-01, 121,176 rows), so a tree-vs-neural comparison is
+  #   data-matched. Features are unchanged -- trees keep their native t-1 row
+  #   plus lag_count lags; this is not a window.
+  # Note this does NOT equalize history reach (tree t-13 vs neural t-48);
+  # that axis moves with lag_count and must be reported. See DataConfig and
+  # docs/BEHAVIOR_DIFFERENCES.md. Flipping this invalidates tree runs.
+  tabular_align_targets: true
+
+training:
+  # Training batches contain one complete target month. Flat models group
+  # all retained series (currently 918); combo models use one month sample.
+  # Membership is derived by the loader, not inferred from this nominal size.
+  # Both paths therefore execute 132 steps per epoch on the base calendar.
+  batch_size: 918
+  # A fuse, not a budget: early stopping decides when to stop. At 132
+  # steps/epoch a model needs far more epochs than the old 200 to reach the
+  # same number of updates, so the cap must never be the binding constraint.
+  epochs: 5000
+  # Shared across every family. The former Transformer-only 1e-4 override was
+  # a private tuning decision; this stable common rate keeps the protocol fair.
+  lr: 0.0001
+  weight_decay: 0.0001  # uniform mild decay across the sweep (matches S4; decoupled under AdamW)
+  # true  = honor the SSM authors' exemptions (Mamba _no_weight_decay marks
+  #         A_log/D/dt_bias, S4's _optim wd=0 on A/B/dt). ONLY those
+  #         author-marked tensors are exempted — the usual AdamW extra of
+  #         never decaying 1-D parameters (norm gains, biases) is deliberately
+  #         NOT applied, so non-SSM arms keep exactly their published
+  #         optimizer treatment. See Trainer._param_groups and
+  #         tests/test_optimizer_groups.py, which pin this.
+  # false = decay everything, as the pre-2026-07 runs did.
+  # Not a settled question: A = -exp(A_log), so decaying A_log shrinks every
+  # head's timescale toward a common value (A -> -1, ~7 steps of memory). On
+  # 144 training months that shrinkage may help rather than hurt, and the
+  # reported winner was trained with it. Run both on flat mamba before
+  # assuming either way.
+  weight_decay_exempt: true
+
+  # Optimizer
+  optimizer: "adamw"  # standardized to AdamW across the sweep (was adam; S4 family already AdamW)
+  # Read by Trainer._create_optimizer for adam/adamw (ignored by sgd). These
+  # are the torch defaults, so they are also what every published run used --
+  # they are stated here so the Adam moments are configurable, not implicit.
+  betas: [0.9, 0.999]
+  eps: 1.0e-08
+
+  # Learning rate scheduler
+  scheduler: "reduce_on_plateau"  # "reduce_on_plateau", "cosine", "step", null
+  # Tracks the early-stopping patience (50). Both counters reset when val loss
+  # improves, so each LR drop is a rescue attempt: land one and the full
+  # 50-epoch window restarts. 15 gives three attempts (+15/+30/+45) with 5
+  # epochs left for the last one to act -- 16 would put it at +48 with only 2.
+  # At the old 5 the LR fell to ~1e-6 inside the window, so the tail of the
+  # wait trained at effectively zero LR.
+  scheduler_patience: 15
+  scheduler_factor: 0.5
+
+  # Early stopping
+  patience: 50    # 50 epochs x 132 steps = 6,600 updates without improvement
+  min_delta: 0.0001  # keeps 1e-9 wobbles from resetting patience forever
+
+  # Device
+  device: cuda  # "cuda", "cpu", "mps"
+
+  # Mixed precision
+  use_amp: false
+
+  # Gradient clipping is ON by default. Without it, Transformer with
+  # The shared 1e-4 rate is stable on the Transformer family.
+  grad_clip: true
+  grad_clip_norm: 1.0
+
+splits:
+  # Data split dates
+  train_end: "2023-12-01"
+  val_start: "2024-01-01"
+  val_end: "2024-12-01"
+  test_start: "2025-01-01"
+  test_end: "2025-05-01"
+
+evaluation:
+  # DRIVING LOSS: normalized MSE (per-combo MinMax) is THE single objective that
+  # drives training + early-stopping (checkpointing.monitor=val_loss below, which
+  # IS this MSE) + the leaderboard sort. Every metric listed here is REPORTED but
+  # never used to select a model.
+  primary_metric: norm_mse_combined
+  driving_loss: mse                       # computed on per-combo MinMax-normalized targets
+
+  # Multi-seed protocol: 3 seeds drawn once (reproducibly) as the first three of a
+  # randint(1,1000) draw with meta-seed 42, then PINNED. Stochastic models
+  # (neural/S4/Mamba) run all 3 -> results.xlsx reports mean±std + the
+  # prediction-ensemble. Baselines are deterministic (single seed). Single-result
+  # mode: just seed 42.
+  seeds: [26, 105, 115]
+
+  # Metrics to compute (all reported; none used for model selection)
+  metrics:
+    - mae
+    - mse
+    - rmse
+    - mape
+    - r2
+
+  # Aggregation method
+  aggregate_by: ["state", "commodity", "flow"]
+
+  # Save predictions
+  save_predictions: true
+  prediction_format: "csv"  # "csv", "parquet", "both"
+
+logging:
+  # Logging configuration
+  log_dir: outputs/logs
+  experiment_name: null  # Auto-generated if null
+  log_level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
+  log_to_console: true
+  log_to_file: true
+  # Every run writes, into log_dir and flushed each epoch so a killed run keeps
+  # its record: <experiment_name>.log, history.csv, metrics.json, and
+  # status.json (the heartbeat scripts/train_status.py reads).
+  #
+  # Optional mirrors. Empty by default -- the files above are the source of
+  # truth, and a published run must not depend on a service being reachable. A
+  # requested backend whose package is missing logs one warning and is skipped.
+  trackers: []            # e.g. ["tensorboard"] or ["tensorboard", "wandb"]
+  tracker_options:        # per-backend kwargs
+    wandb:
+      project: "wctr2026"
+
+checkpointing:
+  # Checkpoint configuration
+  save_dir: outputs/runs
+  save_best_only: true
+  monitor: "val_loss"  # Metric to monitor for best model
+  mode: "min"  # "min" or "max"
+  save_last: true  # Save last epoch checkpoint

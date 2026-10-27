@@ -1,0 +1,34 @@
+name: CPU tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  reproduce-results:
+    name: Recompute paper numbers from saved runs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install numpy==1.26.4 pandas==2.3.0 scipy==1.11.4 matplotlib==3.8.4
+      - run: python tools/verify_against_manifest.py
+      - run: python tools/recompute_results.py
+      - run: python tools/build_claims_ledger.py
+  tests:
+    name: Test suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements-benchmark.txt pytest
+      - run: python -m pytest -q
+        env:
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'

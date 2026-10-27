@@ -1,0 +1,1366 @@
+{
+  "model": "gpt",
+  "variant": "onehot",
+  "aggregate": false,
+  "mode": "one_step_normalized",
+  "prediction_units": "normalized",
+  "scale_dependent_metric_units": "normalized",
+  "percentage_metric_units": "real",
+  "seed": 26,
+  "n_samples": 4590,
+  "predictions_file": "predictions.csv",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "source_domain": {
+    "states": [
+      "Arkansas",
+      "Illinois",
+      "Iowa",
+      "Louisiana",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Wisconsin"
+    ],
+    "target_measure": "legacy_mixed",
+    "duplicate_audit": {
+      "policy": "error",
+      "groups": 0,
+      "rows": 0,
+      "excess_rows": 0,
+      "conflicting_target_groups": 0
+    },
+    "commodity_universe": "all_hs_chapters",
+    "hs2_codes": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    "source_start": "2008-01-01",
+    "source_end": "2025-05-01",
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "run_contract": {
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "data_config": {
+      "batch_by_target_month": true,
+      "cohort_from_train_only": true,
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_policy": "error",
+      "end": "2025-05-01",
+      "expected_hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "expected_source_end": "2025-05-01",
+      "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "expected_source_start": "2008-01-01",
+      "expected_states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "input_len": 36,
+      "lag_count": 12,
+      "normalization_method": "minmax",
+      "normalize": true,
+      "source_format": "monthly",
+      "start": "2009-01-01",
+      "tabular_align_targets": true,
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_end": "2023-12-01",
+      "train_target_start": null,
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "identity": {
+      "aggregate": false,
+      "model": "gpt",
+      "seed": 26,
+      "variant": "onehot"
+    },
+    "model_config": {
+      "bidirectional": false,
+      "d_model": 128,
+      "dropout": 0.1,
+      "embedding_dims": {
+        "commodity": 32,
+        "flow": 2,
+        "state": 8
+      },
+      "hidden_size": 128,
+      "mlp_ratio": 4.0,
+      "name": "gpt",
+      "nhead": 8,
+      "num_layers": 4,
+      "variant": "onehot"
+    },
+    "numerics": {
+      "allow_tf32": false
+    },
+    "run_contract_version": 1,
+    "selection": {
+      "mode": "min",
+      "monitor": "val_loss"
+    },
+    "source_domain": {
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_audit": {
+        "conflicting_target_groups": 0,
+        "excess_rows": 0,
+        "groups": 0,
+        "policy": "error",
+        "rows": 0
+      },
+      "grid_end": "2025-05-01",
+      "grid_start": "2009-01-01",
+      "hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "source_end": "2025-05-01",
+      "source_start": "2008-01-01",
+      "states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_end": "2023-12-01",
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+    "training_config": {
+      "batch_size": 918,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "device": "cuda",
+      "epochs": 5000,
+      "eps": 1e-08,
+      "grad_clip": true,
+      "grad_clip_norm": 1.0,
+      "lr": 0.0001,
+      "min_delta": 0.0001,
+      "optimizer": "adamw",
+      "patience": 50,
+      "scheduler": "reduce_on_plateau",
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 15,
+      "use_amp": false,
+      "weight_decay": 0.0001,
+      "weight_decay_exempt": true
+    }
+  },
+  "training_completion": {
+    "version": 1,
+    "state": "finished",
+    "stop_reason": "early_stopping",
+    "epochs_run": 97,
+    "best_epoch": 47,
+    "best_val": 0.037862001161429876,
+    "patience_counter": 50,
+    "run_contract": {
+      "numerics": {
+        "allow_tf32": false
+      },
+      "run_contract_version": 1,
+      "benchmark_protocol_version": "fair-comparison-v5",
+      "identity": {
+        "model": "gpt",
+        "variant": "onehot",
+        "seed": 26,
+        "aggregate": false
+      },
+      "model_config": {
+        "bidirectional": false,
+        "d_model": 128,
+        "dropout": 0.1,
+        "embedding_dims": {
+          "commodity": 32,
+          "flow": 2,
+          "state": 8
+        },
+        "hidden_size": 128,
+        "mlp_ratio": 4.0,
+        "name": "gpt",
+        "nhead": 8,
+        "num_layers": 4,
+        "variant": "onehot"
+      },
+      "data_config": {
+        "batch_by_target_month": true,
+        "cohort_from_train_only": true,
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_policy": "error",
+        "end": "2025-05-01",
+        "expected_hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "expected_source_end": "2025-05-01",
+        "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+        "expected_source_start": "2008-01-01",
+        "expected_states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "input_len": 36,
+        "lag_count": 12,
+        "normalization_method": "minmax",
+        "normalize": true,
+        "source_format": "monthly",
+        "start": "2009-01-01",
+        "tabular_align_targets": true,
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_end": "2023-12-01",
+        "train_target_start": null,
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      },
+      "training_config": {
+        "batch_size": 918,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "device": "cuda",
+        "epochs": 5000,
+        "eps": 1e-08,
+        "grad_clip": true,
+        "grad_clip_norm": 1.0,
+        "lr": 0.0001,
+        "min_delta": 0.0001,
+        "optimizer": "adamw",
+        "patience": 50,
+        "scheduler": "reduce_on_plateau",
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 15,
+        "use_amp": false,
+        "weight_decay": 0.0001,
+        "weight_decay_exempt": true
+      },
+      "selection": {
+        "monitor": "val_loss",
+        "mode": "min"
+      },
+      "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "source_domain": {
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_audit": {
+          "conflicting_target_groups": 0,
+          "excess_rows": 0,
+          "groups": 0,
+          "policy": "error",
+          "rows": 0
+        },
+        "grid_end": "2025-05-01",
+        "grid_start": "2009-01-01",
+        "hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "source_end": "2025-05-01",
+        "source_start": "2008-01-01",
+        "states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_end": "2023-12-01",
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      }
+    },
+    "checkpoint_sha256": "1a919ad16f154d2d238e7937e5f0b492a1e5fd54a7e15abc469014d21c96a88f"
+  },
+  "cohort": {
+    "protocol_version": "train-only-cohort-v1",
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "cohort_from_train_only": true,
+    "num_combos": 918
+  },
+  "data_protocol": {
+    "input_len": 36,
+    "lag_count": 12,
+    "train_target_start": null
+  },
+  "checkpoint": "outputs/full/gpt_onehot_seed26/best.pth",
+  "model_measurements": {
+    "parameter_count_kind": "torch parameter elements",
+    "total_parameters": 827010,
+    "trainable_parameters": 827010,
+    "frozen_parameters": 0,
+    "parameter_bytes": 3308040,
+    "buffer_bytes": 1069312,
+    "tensors": [
+      {
+        "name": "in_proj.weight",
+        "shape": [
+          128,
+          131
+        ],
+        "elements": 16768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "in_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.ln1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.ln1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.attn.attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.attn.attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.attn.attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.attn.attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.ln2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.ln2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.mlp.0.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.mlp.0.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.mlp.3.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.0.mlp.3.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.ln1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.ln1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.attn.attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.attn.attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.attn.attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.attn.attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.ln2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.ln2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.mlp.0.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.mlp.0.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.mlp.3.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.1.mlp.3.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.ln1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.ln1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.attn.attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.attn.attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.attn.attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.attn.attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.ln2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.ln2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.mlp.0.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.mlp.0.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.mlp.3.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.2.mlp.3.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.ln1.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.ln1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.attn.attn.in_proj_weight",
+        "shape": [
+          384,
+          128
+        ],
+        "elements": 49152,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.attn.attn.in_proj_bias",
+        "shape": [
+          384
+        ],
+        "elements": 384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.attn.attn.out_proj.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.attn.attn.out_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.ln2.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.ln2.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.mlp.0.weight",
+        "shape": [
+          512,
+          128
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.mlp.0.bias",
+        "shape": [
+          512
+        ],
+        "elements": 512,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.mlp.3.weight",
+        "shape": [
+          128,
+          512
+        ],
+        "elements": 65536,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "blocks.3.mlp.3.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "head.0.weight",
+        "shape": [
+          128,
+          128
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "head.0.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "head.3.weight",
+        "shape": [
+          2,
+          128
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "head.3.bias",
+        "shape": [
+          2
+        ],
+        "elements": 2,
+        "dtype": "torch.float32",
+        "trainable": true
+      }
+    ]
+  },
+  "architecture": {
+    "class": "GPTModel",
+    "variant": "onehot",
+    "num_params": 827010,
+    "bidirectional": false,
+    "architecture_versions": {}
+  },
+  "metrics": {
+    "value_mse": 0.03737294932072224,
+    "weight_mse": 0.06339798305001121,
+    "mae": 0.11308207476708884,
+    "value_mae": 0.11504442753487881,
+    "weight_mae": 0.11111972199929886,
+    "rmse": 0.22255520329183145,
+    "value_rmse": 0.1933208455410907,
+    "weight_rmse": 0.2517895610425722,
+    "r2": 0.5111251686105638,
+    "value_r2": 0.5880967029059032,
+    "weight_r2": 0.43415363431522436,
+    "value_mape": 117.47092038575869,
+    "weight_mape": 266.41056842483886,
+    "smape": 44.66542335742369,
+    "value_smape": 41.839668528912455,
+    "weight_smape": 47.49117818593492,
+    "norm_mse_combined": 0.050385466185366726,
+    "value_mase": 0.86766942266967,
+    "weight_mase": 0.840514744139771,
+    "mase": 0.8540920834047205,
+    "value_rmsse": 0.720215839158052,
+    "weight_rmsse": 0.6881739567407233,
+    "rmsse": 0.7041948979493877,
+    "num_params": 827010
+  }
+}

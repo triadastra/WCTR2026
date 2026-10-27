@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - s4_onehot
+  - _self_
+
+model:
+  layer:
+    bidirectional: true

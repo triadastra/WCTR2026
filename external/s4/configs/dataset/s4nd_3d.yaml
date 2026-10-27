@@ -1,0 +1,4 @@
+_name_: s4nd_3d
+data_dir: null  # controller supplies an absolute DATA_DIR; null means repo in tests
+input_len: 36
+encoder_extra_dim: 2

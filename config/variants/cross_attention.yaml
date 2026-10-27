@@ -1,0 +1,23 @@
+# Variant 3: Cross-Attention Encoding
+
+model:
+  variant: cross_attention
+
+  # Embedding dimensions (used before cross-attention)
+  embedding_dims:
+    state: 8
+    commodity: 32
+    flow: 4
+
+  # Cross-attention parameters
+  cross_attention:
+    num_heads: 4
+    d_k: 32  # Key/query dimension per head
+    d_v: 32  # Value dimension per head
+    dropout: 0.0
+
+  # Cross-attention processes combinations of (state, commodity, flow)
+  # Allows model to learn interactions between categorical features
+
+# Note: do not add `data:` here. Variants must not override the base data
+# config — an empty `data:` block parses as `None` and wipes out base.yaml.

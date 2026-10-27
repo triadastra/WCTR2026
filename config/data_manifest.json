@@ -1,0 +1,45 @@
+{
+  "fingerprint_algorithm": "sha256-manifest-v1",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "states": [
+    "Arkansas",
+    "Illinois",
+    "Iowa",
+    "Louisiana",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Wisconsin"
+  ],
+  "source_start": "2008-01-01",
+  "source_end": "2025-05-01",
+  "target_definition": {
+    "commodity_universe": "all_hs_chapters",
+    "measure": "legacy_mixed",
+    "duplicate_policy": "error",
+    "interpretation": "Preaggregated sum-all research benchmark; original repeated records have already been summed, and duplicate monthly keys are rejected. Not independently validated official totals.",
+    "value_unit": "USD",
+    "weight_unit": "kg"
+  },
+  "experiment_calendar": {
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "files": [
+    {
+      "flow": "monthly",
+      "name": "hs2_monthly_aggregated.csv",
+      "bytes": 29746226,
+      "sha256": "585abc646e62283dca0f27854d73d60814cdae6ab64b12e545f7a84f317287fb"
+    }
+  ],
+  "upstream_source_fingerprint": "e5c6610ff4d751fa18e313b06fed04b6c3846ee0d1776417b2b68af4f99a264d",
+  "source_format": "monthly",
+  "source_path": "data/processed/hs2_monthly_aggregated.csv",
+  "source_lineage": "data/processed/dataset_manifest.json"
+}

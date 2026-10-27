@@ -1,0 +1,1387 @@
+{
+  "model": "s4_bidir_mlphead",
+  "variant": "numeric",
+  "aggregate": true,
+  "mode": "one_step_normalized",
+  "prediction_units": "normalized",
+  "scale_dependent_metric_units": "normalized",
+  "percentage_metric_units": "real",
+  "seed": 115,
+  "n_samples": 5,
+  "predictions_file": "predictions.csv",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "source_domain": {
+    "states": [
+      "Arkansas",
+      "Illinois",
+      "Iowa",
+      "Louisiana",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Wisconsin"
+    ],
+    "target_measure": "legacy_mixed",
+    "duplicate_audit": {
+      "policy": "error",
+      "groups": 0,
+      "rows": 0,
+      "excess_rows": 0,
+      "conflicting_target_groups": 0
+    },
+    "commodity_universe": "all_hs_chapters",
+    "hs2_codes": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    "source_start": "2008-01-01",
+    "source_end": "2025-05-01",
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "run_contract": {
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "data_config": {
+      "aggregate": true,
+      "batch_by_target_month": false,
+      "cohort_from_train_only": true,
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_policy": "error",
+      "end": "2025-05-01",
+      "expected_hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "expected_source_end": "2025-05-01",
+      "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "expected_source_start": "2008-01-01",
+      "expected_states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "input_len": 36,
+      "lag_count": 12,
+      "normalization_method": "minmax",
+      "normalize": true,
+      "source_format": "monthly",
+      "start": "2009-01-01",
+      "tabular_align_targets": true,
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_drop_last": false,
+      "train_end": "2023-12-01",
+      "train_target_start": null,
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "identity": {
+      "aggregate": true,
+      "model": "s4_bidir_mlphead",
+      "seed": 115,
+      "variant": "numeric"
+    },
+    "model_config": {
+      "bidirectional": true,
+      "d_model": 128,
+      "d_state": 64,
+      "dropout": 0.1,
+      "dt_transform": "softplus",
+      "embedding_dims": {
+        "commodity": 32,
+        "flow": 2,
+        "state": 8
+      },
+      "hidden_size": 128,
+      "implementation": "authors-modular-s4-v1",
+      "n_layers": 4,
+      "n_ssm": 1,
+      "name": "s4_bidir_mlphead",
+      "num_layers": 4,
+      "prediction_head": "mlp_64",
+      "tie_dropout": true,
+      "variant": "numeric"
+    },
+    "numerics": {
+      "allow_tf32": false
+    },
+    "run_contract_version": 1,
+    "selection": {
+      "mode": "min",
+      "monitor": "val_loss"
+    },
+    "source_domain": {
+      "commodity_universe": "all_hs_chapters",
+      "duplicate_audit": {
+        "conflicting_target_groups": 0,
+        "excess_rows": 0,
+        "groups": 0,
+        "policy": "error",
+        "rows": 0
+      },
+      "grid_end": "2025-05-01",
+      "grid_start": "2009-01-01",
+      "hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "source_end": "2025-05-01",
+      "source_start": "2008-01-01",
+      "states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "target_measure": "legacy_mixed",
+      "test_end": "2025-05-01",
+      "test_start": "2025-01-01",
+      "train_end": "2023-12-01",
+      "val_end": "2024-12-01",
+      "val_start": "2024-01-01"
+    },
+    "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+    "training_config": {
+      "batch_size": 33,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "device": "cuda",
+      "epochs": 5000,
+      "eps": 1e-08,
+      "grad_clip": true,
+      "grad_clip_norm": 1.0,
+      "lr": 0.0001,
+      "min_delta": 0.0001,
+      "optimizer": "adamw",
+      "patience": 50,
+      "scheduler": "reduce_on_plateau",
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 15,
+      "use_amp": false,
+      "weight_decay": 0.0001,
+      "weight_decay_exempt": true
+    }
+  },
+  "training_completion": {
+    "version": 1,
+    "state": "finished",
+    "stop_reason": "early_stopping",
+    "epochs_run": 60,
+    "best_epoch": 10,
+    "best_val": 0.002174715744331479,
+    "patience_counter": 50,
+    "run_contract": {
+      "numerics": {
+        "allow_tf32": false
+      },
+      "run_contract_version": 1,
+      "benchmark_protocol_version": "fair-comparison-v5",
+      "identity": {
+        "model": "s4_bidir_mlphead",
+        "variant": "numeric",
+        "seed": 115,
+        "aggregate": true
+      },
+      "model_config": {
+        "bidirectional": true,
+        "d_model": 128,
+        "d_state": 64,
+        "dropout": 0.1,
+        "dt_transform": "softplus",
+        "embedding_dims": {
+          "commodity": 32,
+          "flow": 2,
+          "state": 8
+        },
+        "hidden_size": 128,
+        "implementation": "authors-modular-s4-v1",
+        "n_layers": 4,
+        "n_ssm": 1,
+        "name": "s4_bidir_mlphead",
+        "num_layers": 4,
+        "prediction_head": "mlp_64",
+        "tie_dropout": true,
+        "variant": "numeric"
+      },
+      "data_config": {
+        "aggregate": true,
+        "batch_by_target_month": false,
+        "cohort_from_train_only": true,
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_policy": "error",
+        "end": "2025-05-01",
+        "expected_hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "expected_source_end": "2025-05-01",
+        "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+        "expected_source_start": "2008-01-01",
+        "expected_states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "input_len": 36,
+        "lag_count": 12,
+        "normalization_method": "minmax",
+        "normalize": true,
+        "source_format": "monthly",
+        "start": "2009-01-01",
+        "tabular_align_targets": true,
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_drop_last": false,
+        "train_end": "2023-12-01",
+        "train_target_start": null,
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      },
+      "training_config": {
+        "batch_size": 33,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "device": "cuda",
+        "epochs": 5000,
+        "eps": 1e-08,
+        "grad_clip": true,
+        "grad_clip_norm": 1.0,
+        "lr": 0.0001,
+        "min_delta": 0.0001,
+        "optimizer": "adamw",
+        "patience": 50,
+        "scheduler": "reduce_on_plateau",
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 15,
+        "use_amp": false,
+        "weight_decay": 0.0001,
+        "weight_decay_exempt": true
+      },
+      "selection": {
+        "monitor": "val_loss",
+        "mode": "min"
+      },
+      "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "source_domain": {
+        "commodity_universe": "all_hs_chapters",
+        "duplicate_audit": {
+          "conflicting_target_groups": 0,
+          "excess_rows": 0,
+          "groups": 0,
+          "policy": "error",
+          "rows": 0
+        },
+        "grid_end": "2025-05-01",
+        "grid_start": "2009-01-01",
+        "hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "source_end": "2025-05-01",
+        "source_start": "2008-01-01",
+        "states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "target_measure": "legacy_mixed",
+        "test_end": "2025-05-01",
+        "test_start": "2025-01-01",
+        "train_end": "2023-12-01",
+        "val_end": "2024-12-01",
+        "val_start": "2024-01-01"
+      }
+    },
+    "checkpoint_sha256": "5eff35296e0b34d1fd697bf32bec8801230c5160c26c56eaf33f347d071083f8"
+  },
+  "cohort": {
+    "protocol_version": "train-only-cohort-v1",
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "cohort_from_train_only": true,
+    "num_combos": 1
+  },
+  "data_protocol": {
+    "input_len": 36,
+    "lag_count": 12,
+    "train_target_start": null
+  },
+  "checkpoint": "/autodl-fs/data/wctr-exp1-mlphead/s4_bidir_mlphead_numeric_seed115/best.pth",
+  "model_measurements": {
+    "parameter_count_kind": "torch parameter elements",
+    "total_parameters": 212802,
+    "trainable_parameters": 212802,
+    "frozen_parameters": 0,
+    "parameter_bytes": 851208,
+    "buffer_bytes": 32,
+    "tensors": [
+      {
+        "name": "input_proj.weight",
+        "shape": [
+          128,
+          28
+        ],
+        "elements": 3584,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "input_proj.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.layer.kernel.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.0.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.layer.kernel.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.1.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.layer.kernel.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.2.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.layer.kernel.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.layers.3.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "backbone.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_proj.0.weight",
+        "shape": [
+          64,
+          128
+        ],
+        "elements": 8192,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_proj.0.bias",
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_proj.3.weight",
+        "shape": [
+          2,
+          64
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "output_proj.3.bias",
+        "shape": [
+          2
+        ],
+        "elements": 2,
+        "dtype": "torch.float32",
+        "trainable": true
+      }
+    ]
+  },
+  "architecture": {
+    "class": "S4Model",
+    "variant": "numeric",
+    "num_params": 212802,
+    "bidirectional": true,
+    "architecture_versions": {
+      "encoder": "numeric_identity_v1",
+      "backbone": "authors-modular-s4-v1"
+    }
+  },
+  "metrics": {
+    "value_mse": 0.005791702578317093,
+    "weight_mse": 0.006197287870253408,
+    "mae": 0.06770539414137602,
+    "value_mae": 0.07377524971961975,
+    "weight_mae": 0.06163553856313229,
+    "rmse": 0.07741304556739545,
+    "value_rmse": 0.07610323631960136,
+    "weight_rmse": 0.07872285481518952,
+    "r2": -1.032673915928001,
+    "value_r2": -0.6063845944128061,
+    "weight_r2": -1.458963237443196,
+    "value_mape": 5.098611441396409,
+    "weight_mape": 8.179539705705796,
+    "smape": 6.466817039415906,
+    "value_smape": 5.168011930873876,
+    "weight_smape": 7.765622147957937,
+    "norm_mse_combined": 0.00599449522428525,
+    "value_mase": 0.42845121821276577,
+    "weight_mase": 0.5154346954689288,
+    "mase": 0.4719429568408473,
+    "value_rmsse": 0.3722003166079985,
+    "weight_rmsse": 0.5193475871891328,
+    "rmsse": 0.4457739518985656,
+    "num_params": 212802
+  }
+}

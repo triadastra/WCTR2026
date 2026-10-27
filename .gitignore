@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Outputs
+outputs/runs/
+outputs/predictions/
+outputs/eval_results/
+outputs/plots/
+*.pth
+*.pkl
+*.ckpt
+
+# Data (optional - uncomment if you don't want to track data)
+# data/exports/*.csv
+# data/imports/*.csv
+
+# Logs
+*.log
+logs/
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model checkpoints
+checkpoints/
+sweeps/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Run artifacts. Checkpoints and per-combo plots are large and regenerable, so
+# they stay out -- but the per-run metrics and predictions do NOT. They are the
+# input to every statistical test in make_significance.py, they total under
+# 100 MB across a full sweep, and excluding them means a lost training box costs
+# a ~20-hour retrain to recompute a p-value.
+#
+# Directories must be re-included before the files inside them: git will not
+# re-include a file whose parent directory is excluded.
+outputs/**
+!outputs/**/
+!outputs/full/*/metrics.json
+!outputs/full/*/predictions.csv
+!outputs/full/*/predictions_norm.csv
+!outputs/full/*/train.log
+!outputs/full/*/inference.log
+# weight_decay_exempt=false ablation (util/wd_ablation.sh). Small, and it is the
+# evidence that the exemption did NOT cause Mamba's regression -- worth keeping
+# so the conclusion can be rechecked without 40 minutes of GPU.
+!outputs/wd_ablation/*/metrics.json
+!outputs/wd_ablation/*.log
+!outputs/wd_ablation/README.md
+# Corrected-cohort reruns (918 lanes / 4,590 targets). Kept SEPARATE from
+# outputs/full so the pre-correction artifacts survive as the evidence for the
+# Procedia correction -- RESULTS_STATUS.md says to keep both, and outputs/full
+# is the only tracked copy in this clone. Same file whitelist as outputs/full.
+!outputs/full_corrected/*/metrics.json
+!outputs/full_corrected/*/predictions.csv
+!outputs/full_corrected/*/predictions_norm.csv
+!outputs/full_corrected/*/train.log
+!outputs/full_corrected/*/inference.log
+!outputs/full_corrected/*/run.log
+!outputs/full_corrected/README.md
+
+# macOS Finder / iCloud copy-on-write duplicate files (e.g. "file 2.py", "AUTHORS 2")
+* [0-9].*
+* [0-9]
+# Excel / Office lock files
+~$*
+paper/
+.venv-fair/
+
+# Isolated CPU environment for model regression checks
+.venv-model-audit/

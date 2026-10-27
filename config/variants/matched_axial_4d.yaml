@@ -1,0 +1,11 @@
+# Matched-information 4-D axial protocol.
+# State, Commodity, and Flow are all structural; no identity embedding is added.
+model:
+  variant: matched_axial_4d
+  categorical_protocol: matched_s4nd
+  embedding_dims:
+    state: 8
+    commodity: 32
+    flow: 2
+  cross_attention:
+    dropout: 0.0

@@ -1,0 +1,56 @@
+# Mamba-ND grid model. Applies the Mamba-ND method (per-axis 1-D selective
+# scans, alternating axis and direction layer by layer) over the dense
+# (Time, State, Commodity, Flow) lattice, with Mamba-2 as the mixer.
+# Variant (cross_attention_2d/3d/4d) selects which categorical axes are scanned.
+
+model:
+  name: mamba_nd
+
+  # d_model and depth match the rest of the benchmark. Keep the primary arms
+  # fixed at four layers so dimensionality does not silently change capacity.
+  # ``coverage`` remains available as a separately labelled ablation.
+  d_model: 128
+  n_layers: 4
+  dropout: 0.1
+  d_state: 64       # Mamba-2 SSD state dimension
+  d_conv: 4         # short causal conv width
+  expand: 2         # block expansion (inner dim = expand * d_model = 256)
+  headdim: 32       # SSD head dim (256 / 32 = 8 heads)
+
+  # Which axis each layer scans, and in which direction. See
+  # src/models/scan_schedule.py.
+  #   cyclic  - one axis per layer, direction flipped after each full cycle.
+  #             Reaches every axis within n_layers=len(scan axes); falls back to
+  #             forward-only when there is no budget for both directions.
+  #   paired  - the upstream Mamba-ND schedule: each axis forward then backward
+  #             in adjacent layers. Needs 2 * (scan axes) layers before the
+  #             schedule repeats, so at n_layers=4 the 3d and 4d variants never
+  #             reach their later axes at all.
+  #   legacy  - the original schedule. Phase-locks axis order against direction
+  #             whenever the axis count is even, pinning every axis to a single
+  #             direction at ANY depth. 2d and 4d were affected; 3d escaped
+  #             because 3 and 2 are coprime. Kept only to reproduce prior runs.
+  scan_schedule: cyclic
+  # A REQUEST, not a guarantee. With depth_policy: fixed and n_layers: 4 the
+  # cyclic schedule achieves (measured, and warned at construction):
+  #   2d: Time and State both directions
+  #   3d: Time both directions; State, Commodity forward only
+  #   4d: every axis forward only
+  # so the 3d/4d arms are effectively one-directional on their later axes.
+  # Every 1-D comparator except the unmasked vanilla Transformer (LSTM/GRU/
+  # GPT/Mamba-2, the hydra 1-D S4 arms) is causal over the input window, so
+  # "ND vs 1-D" is confounded with
+  # "two-sided vs causal" wherever coverage is achieved. The achieved coverage
+  # is written to metrics.json (architecture.scan_coverage) by
+  # scripts/inference.py; see docs/FAIR_BENCHMARK_PROTOCOL.md.
+  bidirectional: true
+
+  # Depth policy (see MambaNDModel._build_model):
+  #   coverage — depth = 2 * scan axes
+  #            (4/6/8 for 2d/3d/4d): every axis gets one forward and one
+  #            backward pass at every rank, at the cost of parameter matching.
+  #   fixed (default) — honor n_layers exactly (iso-layer arm; deeper ranks then
+  #            cover their later axes only partially and warn about it).
+  depth_policy: fixed
+
+  # Note: variant is set separately via variant config files

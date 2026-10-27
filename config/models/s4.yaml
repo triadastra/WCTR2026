@@ -1,0 +1,20 @@
+# All S4 arms use the authors' modular SequenceModel/S4Block/DPLR kernel.
+# See external/s4/UPSTREAM.md for source provenance and local adapter patches.
+
+model:
+  name: s4
+  implementation: authors-modular-s4-v1
+  n_ssm: 1
+  dt_transform: softplus
+  tie_dropout: true
+
+  # Width/depth matching is not parameter-count matching.
+  d_model: 128
+  n_layers: 4
+  # Common S4-family state size, pinned by tests/test_protocol_config.py.
+  # Equal state size does not make S4 and S4ND identical: their axis kernels
+  # and bidirectionality differ. Mamba's SSD state is a different quantity.
+  d_state: 64
+  dropout: 0.1
+
+  # Note: variant (onehot / embeddings) is set separately via variant configs.

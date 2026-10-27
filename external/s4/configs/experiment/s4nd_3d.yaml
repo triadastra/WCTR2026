@@ -1,0 +1,63 @@
+# @package _global_
+defaults:
+  - /trainer: default
+  - /loader: default
+  - /task: regression
+  - /optimizer: adamw
+  - /scheduler: plateau
+  - /model: s4
+  - /dataset: s4nd_3d
+  - override /model/layer: s4nd
+
+dataset:
+  _name_: s4nd_3d
+  data_dir: null  # controller supplies an absolute DATA_DIR
+  input_len: 36
+  encoder_extra_dim: 2
+
+encoder:
+  - _name_: flowid
+    d_flow: 2
+  - linear
+decoder:
+  _name_: sequence
+  mode: last
+
+model:
+  n_layers: 4
+  d_model: 128
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization; was 0.2)
+  prenorm: true
+  transposed: false
+  layer:
+    _name_: s4nd
+    d_state: 64  # S4-family state size, aligned at 64 across the local S4 backbone and every hydra S4/S4ND arm (author decision 2026-09-13; recorded hydra runs used 128)
+    bidirectional: true
+    dim: 3
+    contract_version: 1
+
+loader:
+  batch_size: 2
+  num_workers: 0
+  drop_last: false
+loader_train:
+  batch_size: 2
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-4
+
+train:
+  monitor: val/loss
+  mode: min
+  interval: epoch
+  max_steps: null
+  test: true
+  seed: 1337
+
+trainer:
+  max_epochs: 200
+  accelerator: auto
+  devices: 1
+  precision: 32  # fp32 across the sweep (was 16) — removes the fp16-vs-fp32 confound vs the github models
+  val_check_interval: 1.0

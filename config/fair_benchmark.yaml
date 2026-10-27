@@ -1,0 +1,63 @@
+# Historical proposal only; not consumed by the canonical experiment runner.
+# Procedia scope decision: no tuning/LR sweep. Use experiment_manifest.env
+# and the fixed initial neural LR 1e-4 in base.yaml instead.
+protocol: fair_v1
+output_root: outputs/fair_v1
+seeds: [26, 105, 115]
+tracks: [controlled, tuned]
+selection:
+  metric: norm_mse_combined
+  direction: min
+  candidates_per_arm: 12
+  reduction: mean_across_seeds
+  exp3: reuse_exp2_selection_without_retuning
+  test_access: after_selection_frozen
+experiments:
+  exp1:
+    aggregate: true
+    variants: [embeddings]
+    models: [lstm, gru, transformer, gpt, mamba, s4, xgboost, lightgbm, random_forest]
+    input_len: 36
+    lag_count: 12
+    batch_size: 64
+  exp2:
+    aggregate: false
+    flat_models: [lstm, gru, transformer, gpt, mamba, s4, xgboost, lightgbm, random_forest]
+    flat_variants: [embeddings, onehot]
+    ca_models: [lstm, gru, transformer]
+    ca_variants: [cross_attention, film_attention]
+    axial_models: [lstm, gru, transformer, gpt, mamba, s4, mamba_nd]
+    axial_variants: [cross_attention_2d, cross_attention_3d, cross_attention_4d]
+    external_s4: [s4_embeddings, s4_onehot, s4nd_2d, s4nd_2d_state, s4nd_3d, s4nd_4d]
+    input_len: 36
+    lag_count: 12
+    batch_unit: target_month
+  exp3:
+    inherit_arms: exp2
+    windows: [6, 12, 24, 36]
+    lags: [6, 12, 24, 36]
+    train_target_start: '2015-01-01'
+    batch_unit: target_month
+baselines: [seasonal_naive, random_walk, moving_average]
+data_overrides:
+  cohort_from_train_only: true
+  tabular_align_targets: true
+  tabular_feature_mode: window
+  train_drop_last: false
+search:
+  neural:
+    lr: [0.0001, 0.0003, 0.001]
+    weight_decay: [0.0, 0.0001]
+    dropout: [0.0, 0.1]
+  xgboost:
+    learning_rate: [0.02, 0.05, 0.1]
+    max_depth: [4, 8]
+    colsample_bytree: [0.8, 1.0]
+  lightgbm:
+    learning_rate: [0.02, 0.05, 0.1]
+    num_leaves: [31, 255]
+    colsample_bytree: [0.8, 1.0]
+  random_forest:
+    max_features: [0.33, 0.67, 1.0]
+    min_samples_leaf: [2, 5]
+    max_depth: [16, null]

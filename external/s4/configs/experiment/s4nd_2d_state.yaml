@@ -1,0 +1,90 @@
+# @package _global_
+# S4ND "State-flat" 2-D by State: State is the SOLE convolved categorical axis.
+# Commodity x Flow is folded into the batch and re-injected as per-sample features
+# via the cfstate encoder. Output (B,S,2); the s4nd layer convolves over
+# (State, time) only -> dim=2. This is the literal Tensor(B,S,L,F) of the paper
+# and the clean "+State" rung of the dimensionality ablation. Standardized to the
+# sweep (d_state=64 since 2026-09-13, precision=32, batch=8); the sibling s4nd_2d instead keeps
+# Commodity x Flow as a grid axis (dim=3).
+defaults:
+  - /trainer: default
+  - /loader: default
+  - /task: regression
+  - /optimizer: adamw
+  - /scheduler: plateau
+  - /model: s4
+  - /dataset: s4nd_2d_state
+  - override /model/layer: s4nd
+
+# batch_size 172 is NOT arbitrary. Unlike the other s4nd variants, one sample
+# here is a (commodity x flow group, month) pair, not a whole month: the dataset
+# yields 172 groups x 132 train months = 22,704 samples. 22704 / 172 = 132 steps
+# per epoch, matching every other arm, and 172 groups x 8 states = 1,376 cells of
+# which the cohort's kept combos are real -- 918 under the corrected train-only
+# cohort (903 legacy) -- so ~918 targets per gradient step, also matching. The
+# group axis G follows pipe.kept_combos, but the group and state counts are
+# cohort-invariant here: measured on this dataset, both cohorts give 172 groups
+# x 8 states = 1,376 cells. So 172 survives the 903 -> 918 correction unchanged;
+# only the kept-cell count moves.
+#
+# The month count moved 96 -> 132 when the double-applied burn-in was fixed
+# (first train target 2016-01 -> 2013-01; see debug.md). 172 self-corrected
+# through that change -- it divides the sample count either way -- so the batch
+# size is unchanged and only these numbers are restated. Measured 2026-09-02.
+# At batch_size 1 this arm ran one step per sample and took ~9.5 min/epoch
+# against s4nd_2d's 10 s (timed pre-burn-in-fix, at 16,512 samples; the same
+# arm is 22,704 samples now).
+dataset:
+  _name_: s4nd_2d_state
+  data_dir: null  # controller supplies an absolute DATA_DIR
+  input_len: 36
+
+encoder:
+  - _name_: cfstate
+    learn_flow: true
+    d_flow: 2
+    flow_init: normal
+    flow_std: 0.02
+  - linear
+decoder:
+  _name_: sequence
+  mode: last
+
+model:
+  n_layers: 4
+  d_model: 128
+  dropout: 0.1  # standardized to 0.1 across the sweep (uniform regularization)
+  prenorm: true
+  transposed: false
+  layer:
+    _name_: s4nd
+    d_state: 64  # S4-family state size, aligned at 64 across the local S4 backbone and every hydra S4/S4ND arm (author decision 2026-09-13; recorded hydra runs used 128)
+    bidirectional: true
+    dim: 2  # convolves over (State, time) only; commodity x flow is in the features
+    contract_version: 1
+
+loader:
+  batch_size: 172
+  num_workers: 0
+  drop_last: false
+loader_train:
+  batch_size: 172
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-4
+
+train:
+  monitor: val/loss
+  mode: min
+  interval: epoch
+  max_steps: null
+  test: true
+  seed: 1337
+
+trainer:
+  max_epochs: 200
+  accelerator: auto
+  devices: 1
+  precision: 32  # fp32 across the sweep (removes the fp16-vs-fp32 confound)
+  val_check_interval: 1.0

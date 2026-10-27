@@ -1,0 +1,11 @@
+# Matched-information 2-D axial protocol.
+# State is structural; Commodity and Flow remain learned identity features.
+model:
+  variant: matched_axial_2d
+  categorical_protocol: matched_s4nd
+  embedding_dims:
+    state: 8
+    commodity: 32
+    flow: 2
+  cross_attention:
+    dropout: 0.0

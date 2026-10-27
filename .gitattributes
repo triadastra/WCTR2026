@@ -1,0 +1,7 @@
+# Normalize line endings in Git for ordinary text files...
+* text=auto
+# ...but preserve archived evidence bytes so published SHA-256 receipts survive every clone,
+# including Windows clones with core.autocrlf=true.
+results/** -text
+data/** -text
+docs/paper_audit/** -text

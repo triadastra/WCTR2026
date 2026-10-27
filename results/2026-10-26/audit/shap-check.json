@@ -1,0 +1,58 @@
+{
+  "lstm": {
+    "top": [
+      [
+        "Weight",
+        0.1641945822643623
+      ],
+      [
+        "Value",
+        0.15720798950472012
+      ],
+      [
+        "value_lag_1",
+        0.07391386161253609
+      ],
+      [
+        "weight_lag_1",
+        0.06188945832939627
+      ],
+      [
+        "other states",
+        0.0493841660188051
+      ]
+    ],
+    "dollars": 3380463.8720180043,
+    "lanes": 24,
+    "months": 5,
+    "method": "expected gradients; mean absolute net attribution, not signed causal change"
+  },
+  "s4": {
+    "top": [
+      [
+        "Weight",
+        0.1371079513175243
+      ],
+      [
+        "Value",
+        0.11615855619052239
+      ],
+      [
+        "value_lag_1",
+        0.0708246948221446
+      ],
+      [
+        "weight_lag_1",
+        0.06524774273945184
+      ],
+      [
+        "cos_month",
+        0.05005187069659205
+      ]
+    ],
+    "dollars": 4173070.642932494,
+    "lanes": 24,
+    "months": 5,
+    "method": "expected gradients; mean absolute net attribution, not signed causal change"
+  }
+}

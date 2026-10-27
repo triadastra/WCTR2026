@@ -1,0 +1,3 @@
+# Experimental LSTM/GRU attention with identity in queries and keys.
+model:
+  variant: identity_cross_attention

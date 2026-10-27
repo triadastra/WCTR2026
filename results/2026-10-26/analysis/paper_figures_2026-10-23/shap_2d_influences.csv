@@ -1,0 +1,65 @@
+model,rank,influence,share,source,lanes,months
+LSTM,1,Own weight,0.16419459221488186,own lane,24,5
+LSTM,2,Own value,0.15720798962066415,own lane,24,5
+LSTM,3,Own value lag 1,0.07391385929443946,own lane,24,5
+LSTM,4,Own weight lag 1,0.06188946064090244,own lane,24,5
+LSTM,5,"Other states, same commodity",0.04938416525895103,other lanes,24,5
+LSTM,6,Own value lag 2,0.04255997625073837,own lane,24,5
+LSTM,7,Own weight lag 2,0.035508676125930505,own lane,24,5
+LSTM,8,Own value lag 9,0.029810560815369615,own lane,24,5
+LSTM,9,Own value lag 11,0.029388622799696663,own lane,24,5
+LSTM,10,Own weight lag 5,0.027180248701496157,own lane,24,5
+LSTM,11,Own weight lag 3,0.02666922572504376,own lane,24,5
+LSTM,12,Own value lag 3,0.026077155592518494,own lane,24,5
+LSTM,13,Own value lag 4,0.024427366438314023,own lane,24,5
+LSTM,14,Own value lag 5,0.02266183204667251,own lane,24,5
+LSTM,15,Month (sine),0.02243887430475465,own lane,24,5
+LSTM,16,Own value lag 10,0.02123980122599184,own lane,24,5
+LSTM,17,Own weight lag 11,0.020345516858627982,own lane,24,5
+LSTM,18,Own weight lag 9,0.01940634271143742,own lane,24,5
+LSTM,19,Own weight lag 12,0.017376435916576706,own lane,24,5
+LSTM,20,Own value lag 6,0.01700599168042199,own lane,24,5
+LSTM,21,Own weight lag 6,0.016309803938092837,own lane,24,5
+LSTM,22,Own weight lag 4,0.01621262913079515,own lane,24,5
+LSTM,23,Month (cosine),0.01438402006342496,own lane,24,5
+LSTM,24,Own value lag 12,0.013873039570084119,own lane,24,5
+LSTM,25,Own weight lag 8,0.012744645644018688,own lane,24,5
+LSTM,26,Own weight lag 7,0.01143813277612823,own lane,24,5
+LSTM,27,Own weight lag 10,0.010920038485757169,own lane,24,5
+LSTM,28,Own value lag 7,0.009326769925245917,own lane,24,5
+LSTM,29,Own value lag 8,0.0061042262430232785,own lane,24,5
+LSTM,30,"Same state & commodity, other flow",0.0,other lanes,24,5
+LSTM,31,"Same state, other commodities",0.0,other lanes,24,5
+LSTM,32,Unrelated lanes,0.0,other lanes,24,5
+S4,1,Own weight,0.1371079573611266,own lane,24,5
+S4,2,Own value,0.11615855221935147,own lane,24,5
+S4,3,Own value lag 1,0.070824689665198,own lane,24,5
+S4,4,Own weight lag 1,0.06524774493429643,own lane,24,5
+S4,5,Month (cosine),0.0500518694572911,own lane,24,5
+S4,6,"Other states, same commodity",0.04754243320441011,other lanes,24,5
+S4,7,Own value lag 2,0.040949679980645276,own lane,24,5
+S4,8,Own weight lag 2,0.04065386394353202,own lane,24,5
+S4,9,Own value lag 11,0.03460154731972537,own lane,24,5
+S4,10,Own weight lag 3,0.03259469362453487,own lane,24,5
+S4,11,Own value lag 4,0.03187605158993375,own lane,24,5
+S4,12,Own value lag 5,0.02921403442310303,own lane,24,5
+S4,13,Month (sine),0.028757089561663778,own lane,24,5
+S4,14,Own value lag 3,0.028514276641194006,own lane,24,5
+S4,15,Own weight lag 4,0.02830788697965602,own lane,24,5
+S4,16,Own weight lag 11,0.026591805663429443,own lane,24,5
+S4,17,Own weight lag 5,0.023590002002178728,own lane,24,5
+S4,18,Own weight lag 10,0.021617114763864197,own lane,24,5
+S4,19,Own weight lag 9,0.019894469782922728,own lane,24,5
+S4,20,Own value lag 10,0.017614811486913528,own lane,24,5
+S4,21,Own value lag 6,0.014686861246271348,own lane,24,5
+S4,22,Own value lag 8,0.013991564927483543,own lane,24,5
+S4,23,Own weight lag 6,0.012660088962370218,own lane,24,5
+S4,24,Own weight lag 7,0.012282258613783107,own lane,24,5
+S4,25,Own value lag 7,0.012004293509390576,own lane,24,5
+S4,26,Own value lag 9,0.011349663462514335,own lane,24,5
+S4,27,Own weight lag 8,0.010897103860658591,own lane,24,5
+S4,28,Own value lag 12,0.010859177867963133,own lane,24,5
+S4,29,Own weight lag 12,0.009558412944594736,own lane,24,5
+S4,30,"Same state & commodity, other flow",0.0,other lanes,24,5
+S4,31,"Same state, other commodities",0.0,other lanes,24,5
+S4,32,Unrelated lanes,0.0,other lanes,24,5

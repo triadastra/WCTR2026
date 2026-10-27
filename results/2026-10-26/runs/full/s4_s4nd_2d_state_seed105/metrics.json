@@ -1,0 +1,1938 @@
+{
+  "model_measurements": {
+    "parameter_count_kind": "torch parameter elements",
+    "total_parameters": 278822,
+    "trainable_parameters": 278822,
+    "frozen_parameters": 0,
+    "parameter_bytes": 1115288,
+    "buffer_bytes": 64,
+    "tensors": [
+      {
+        "name": "model.layers.0.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.0.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.1.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.2.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.D",
+        "shape": [
+          1,
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.0.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.inv_dt",
+        "shape": [
+          128,
+          1
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.C",
+        "shape": [
+          2,
+          128,
+          32,
+          2
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.B",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.A_real",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.A_imag",
+        "shape": [
+          1,
+          32
+        ],
+        "elements": 32,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.kernel.1.P",
+        "shape": [
+          1,
+          1,
+          32,
+          2
+        ],
+        "elements": 64,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.output_linear.0.weight",
+        "shape": [
+          256,
+          128
+        ],
+        "elements": 32768,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.layer.output_linear.0.bias",
+        "shape": [
+          256
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.layers.3.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.norm.norm.weight",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "model.norm.norm.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.0.comm.weight",
+        "shape": [
+          93,
+          32
+        ],
+        "elements": 2976,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.0.flow.weight",
+        "shape": [
+          2,
+          2
+        ],
+        "elements": 4,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.1.weight",
+        "shape": [
+          128,
+          62
+        ],
+        "elements": 7936,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "encoder.1.bias",
+        "shape": [
+          128
+        ],
+        "elements": 128,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "decoder.0.output_transform.weight",
+        "shape": [
+          2,
+          128
+        ],
+        "elements": 256,
+        "dtype": "torch.float32",
+        "trainable": true
+      },
+      {
+        "name": "decoder.0.output_transform.bias",
+        "shape": [
+          2
+        ],
+        "elements": 2,
+        "dtype": "torch.float32",
+        "trainable": true
+      }
+    ]
+  },
+  "model": "s4nd",
+  "variant": "2d_state",
+  "aggregate": false,
+  "mode": "one_step_normalized",
+  "seed": 105,
+  "prediction_units": "normalized",
+  "scale_dependent_metric_units": "normalized",
+  "percentage_metric_units": "real",
+  "n_samples": 4590,
+  "predictions_file": "predictions_norm.csv",
+  "checkpoint": "/autodl-fs/data/wctr-20260923-pr27/production-outputs/full/s4_s4nd_2d_state_seed105/hydra/checkpoints/val/loss.ckpt",
+  "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+  "source_domain": {
+    "states": [
+      "Arkansas",
+      "Illinois",
+      "Iowa",
+      "Louisiana",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Wisconsin"
+    ],
+    "target_measure": "legacy_mixed",
+    "duplicate_audit": {
+      "policy": "error",
+      "groups": 0,
+      "rows": 0,
+      "excess_rows": 0,
+      "conflicting_target_groups": 0
+    },
+    "commodity_universe": "all_hs_chapters",
+    "hs2_codes": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+    ],
+    "source_start": "2008-01-01",
+    "source_end": "2025-05-01",
+    "grid_start": "2009-01-01",
+    "grid_end": "2025-05-01",
+    "train_end": "2023-12-01",
+    "val_start": "2024-01-01",
+    "val_end": "2024-12-01",
+    "test_start": "2025-01-01",
+    "test_end": "2025-05-01"
+  },
+  "run_contract": {
+    "run_contract_version": 1,
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "identity": {
+      "model": "s4nd",
+      "variant": "2d_state",
+      "seed": 105,
+      "aggregate": false
+    },
+    "model_config": {
+      "model": {
+        "layer": {
+          "_name_": "s4nd",
+          "d_state": 64,
+          "channels": 1,
+          "bidirectional": true,
+          "activation": "gelu",
+          "final_act": "glu",
+          "initializer": null,
+          "weight_norm": false,
+          "trank": 1,
+          "dropout": 0.1,
+          "tie_dropout": true,
+          "init": "legs",
+          "rank": 1,
+          "dt_min": 0.001,
+          "dt_max": 0.1,
+          "lr": null,
+          "n_ssm": 1,
+          "deterministic": false,
+          "l_max": null,
+          "verbose": true,
+          "linear": false,
+          "dim": 2,
+          "contract_version": 1
+        },
+        "_name_": "model",
+        "prenorm": true,
+        "transposed": false,
+        "n_layers": 4,
+        "d_model": 128,
+        "bidirectional": false,
+        "residual": "R",
+        "pool": {
+          "_name_": "pool",
+          "stride": 1,
+          "expand": null
+        },
+        "norm": "layer",
+        "dropout": 0.1,
+        "tie_dropout": true,
+        "track_norms": true,
+        "encoder": null,
+        "decoder": null
+      },
+      "encoder": [
+        {
+          "_name_": "cfstate",
+          "learn_flow": true,
+          "d_flow": 2,
+          "flow_init": "normal",
+          "flow_std": 0.02
+        },
+        "linear"
+      ],
+      "decoder": {
+        "_name_": "sequence",
+        "mode": "last"
+      },
+      "task": {
+        "_name_": "base",
+        "loss": "mse",
+        "metrics": "mse",
+        "torchmetrics": null
+      },
+      "grid_padding": "fixed-lattice-masked-input-and-layers-v1"
+    },
+    "data_config": {
+      "source_format": "monthly",
+      "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "expected_states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "expected_hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "expected_source_start": "2008-01-01",
+      "expected_source_end": "2025-05-01",
+      "target_measure": "legacy_mixed",
+      "duplicate_policy": "error",
+      "commodity_universe": "all_hs_chapters",
+      "start": "2009-01-01",
+      "end": "2025-05-01",
+      "input_len": 36,
+      "lag_count": 12,
+      "normalize": true,
+      "normalization_method": "minmax",
+      "filter_sparse": true,
+      "min_nonzero_frac": 0.95,
+      "cohort_from_train_only": true,
+      "allow_legacy_full_timeline": false,
+      "tabular_align_targets": true,
+      "tabular_feature_mode": "last_row",
+      "batch_by_target_month": true,
+      "train_drop_last": false,
+      "aggregate": false,
+      "train_target_start": null,
+      "train_end": "2023-12-01",
+      "val_start": "2024-01-01",
+      "val_end": "2024-12-01",
+      "test_start": "2025-01-01",
+      "test_end": "2025-05-01"
+    },
+    "training_config": {
+      "optimizer": {
+        "_name_": "adamw",
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ]
+      },
+      "scheduler": {
+        "_name_": "plateau",
+        "mode": "min",
+        "factor": 0.5,
+        "patience": 15,
+        "min_lr": 0.0
+      },
+      "loader": {
+        "batch_size": 172,
+        "num_workers": 0,
+        "pin_memory": true,
+        "drop_last": false
+      },
+      "loader_train": {
+        "batch_size": 172
+      },
+      "trainer": {
+        "accelerator": "auto",
+        "strategy": "auto",
+        "devices": 1,
+        "accumulate_grad_batches": 1,
+        "max_epochs": 5000,
+        "gradient_clip_val": 1.0,
+        "log_every_n_steps": 10,
+        "limit_train_batches": 1.0,
+        "limit_val_batches": 1.0,
+        "enable_model_summary": false,
+        "precision": 32,
+        "val_check_interval": 1.0,
+        "deterministic": "warn"
+      },
+      "train": {
+        "name": null,
+        "interval": "epoch",
+        "monitor": "val/loss",
+        "mode": "min",
+        "ema": 0.0,
+        "debug": false,
+        "ignore_warnings": false,
+        "state": {
+          "mode": null,
+          "n_context": 0,
+          "n_context_eval": 0
+        },
+        "optimizer_param_grouping": null,
+        "disable_dataset": false,
+        "validate_at_start": false,
+        "pretrained_model_path": null,
+        "pretrained_model_strict_load": true,
+        "pretrained_model_state_hook": {
+          "_name_": null
+        },
+        "post_init_hook": {
+          "_name_": null
+        },
+        "layer_decay": {
+          "_name_": null,
+          "decay": 0.7
+        },
+        "track_grad_norms": false,
+        "max_steps": null
+      },
+      "callbacks": {
+        "learning_rate_monitor": {
+          "logging_interval": "epoch"
+        },
+        "timer": {
+          "step": true,
+          "inter_step": false,
+          "epoch": true,
+          "val": true,
+          "_name_": "timer"
+        },
+        "params": {
+          "total": true,
+          "trainable": true,
+          "fixed": true,
+          "_name_": "params"
+        },
+        "model_checkpoint": {
+          "monitor": "val/loss",
+          "mode": "min",
+          "save_top_k": 1,
+          "save_last": true,
+          "auto_insert_metric_name": false,
+          "verbose": true,
+          "_name_": "model_checkpoint"
+        },
+        "rich_model_summary": {
+          "max_depth": 1,
+          "_name_": "rich_model_summary"
+        },
+        "rich_progress_bar": {
+          "refresh_rate": 1,
+          "leave": true,
+          "_name_": "rich_progress_bar"
+        },
+        "early_stopping": {
+          "monitor": "val/loss",
+          "mode": "min",
+          "patience": 50,
+          "min_delta": 0.0001,
+          "_name_": "early_stopping"
+        }
+      },
+      "loss_reduction": "valid-target-mean-v2",
+      "allow_tf32": false
+    },
+    "selection": {
+      "monitor": "val/loss",
+      "mode": "min"
+    },
+    "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+    "source_domain": {
+      "states": [
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+        "Louisiana",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Wisconsin"
+      ],
+      "target_measure": "legacy_mixed",
+      "duplicate_audit": {
+        "policy": "error",
+        "groups": 0,
+        "rows": 0,
+        "excess_rows": 0,
+        "conflicting_target_groups": 0
+      },
+      "commodity_universe": "all_hs_chapters",
+      "hs2_codes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98"
+      ],
+      "source_start": "2008-01-01",
+      "source_end": "2025-05-01",
+      "grid_start": "2009-01-01",
+      "grid_end": "2025-05-01",
+      "train_end": "2023-12-01",
+      "val_start": "2024-01-01",
+      "val_end": "2024-12-01",
+      "test_start": "2025-01-01",
+      "test_end": "2025-05-01"
+    }
+  },
+  "training_completion": {
+    "version": 1,
+    "kind": "upstream_s4",
+    "state": "finished",
+    "stop_reason": "early_stopping",
+    "epochs_run": 80,
+    "best_epoch": 30,
+    "best_val": 0.038110118359327316,
+    "patience_counter": 50,
+    "run_contract": {
+      "run_contract_version": 1,
+      "benchmark_protocol_version": "fair-comparison-v5",
+      "identity": {
+        "model": "s4nd",
+        "variant": "2d_state",
+        "seed": 105,
+        "aggregate": false
+      },
+      "model_config": {
+        "model": {
+          "layer": {
+            "_name_": "s4nd",
+            "d_state": 64,
+            "channels": 1,
+            "bidirectional": true,
+            "activation": "gelu",
+            "final_act": "glu",
+            "initializer": null,
+            "weight_norm": false,
+            "trank": 1,
+            "dropout": 0.1,
+            "tie_dropout": true,
+            "init": "legs",
+            "rank": 1,
+            "dt_min": 0.001,
+            "dt_max": 0.1,
+            "lr": null,
+            "n_ssm": 1,
+            "deterministic": false,
+            "l_max": null,
+            "verbose": true,
+            "linear": false,
+            "dim": 2,
+            "contract_version": 1
+          },
+          "_name_": "model",
+          "prenorm": true,
+          "transposed": false,
+          "n_layers": 4,
+          "d_model": 128,
+          "bidirectional": false,
+          "residual": "R",
+          "pool": {
+            "_name_": "pool",
+            "stride": 1,
+            "expand": null
+          },
+          "norm": "layer",
+          "dropout": 0.1,
+          "tie_dropout": true,
+          "track_norms": true,
+          "encoder": null,
+          "decoder": null
+        },
+        "encoder": [
+          {
+            "_name_": "cfstate",
+            "learn_flow": true,
+            "d_flow": 2,
+            "flow_init": "normal",
+            "flow_std": 0.02
+          },
+          "linear"
+        ],
+        "decoder": {
+          "_name_": "sequence",
+          "mode": "last"
+        },
+        "task": {
+          "_name_": "base",
+          "loss": "mse",
+          "metrics": "mse",
+          "torchmetrics": null
+        },
+        "grid_padding": "fixed-lattice-masked-input-and-layers-v1"
+      },
+      "data_config": {
+        "source_format": "monthly",
+        "expected_source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+        "expected_states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "expected_hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "expected_source_start": "2008-01-01",
+        "expected_source_end": "2025-05-01",
+        "target_measure": "legacy_mixed",
+        "duplicate_policy": "error",
+        "commodity_universe": "all_hs_chapters",
+        "start": "2009-01-01",
+        "end": "2025-05-01",
+        "input_len": 36,
+        "lag_count": 12,
+        "normalize": true,
+        "normalization_method": "minmax",
+        "filter_sparse": true,
+        "min_nonzero_frac": 0.95,
+        "cohort_from_train_only": true,
+        "allow_legacy_full_timeline": false,
+        "tabular_align_targets": true,
+        "tabular_feature_mode": "last_row",
+        "batch_by_target_month": true,
+        "train_drop_last": false,
+        "aggregate": false,
+        "train_target_start": null,
+        "train_end": "2023-12-01",
+        "val_start": "2024-01-01",
+        "val_end": "2024-12-01",
+        "test_start": "2025-01-01",
+        "test_end": "2025-05-01"
+      },
+      "training_config": {
+        "optimizer": {
+          "_name_": "adamw",
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ]
+        },
+        "scheduler": {
+          "_name_": "plateau",
+          "mode": "min",
+          "factor": 0.5,
+          "patience": 15,
+          "min_lr": 0.0
+        },
+        "loader": {
+          "batch_size": 172,
+          "num_workers": 0,
+          "pin_memory": true,
+          "drop_last": false
+        },
+        "loader_train": {
+          "batch_size": 172
+        },
+        "trainer": {
+          "accelerator": "auto",
+          "strategy": "auto",
+          "devices": 1,
+          "accumulate_grad_batches": 1,
+          "max_epochs": 5000,
+          "gradient_clip_val": 1.0,
+          "log_every_n_steps": 10,
+          "limit_train_batches": 1.0,
+          "limit_val_batches": 1.0,
+          "enable_model_summary": false,
+          "precision": 32,
+          "val_check_interval": 1.0,
+          "deterministic": "warn"
+        },
+        "train": {
+          "name": null,
+          "interval": "epoch",
+          "monitor": "val/loss",
+          "mode": "min",
+          "ema": 0.0,
+          "debug": false,
+          "ignore_warnings": false,
+          "state": {
+            "mode": null,
+            "n_context": 0,
+            "n_context_eval": 0
+          },
+          "optimizer_param_grouping": null,
+          "disable_dataset": false,
+          "validate_at_start": false,
+          "pretrained_model_path": null,
+          "pretrained_model_strict_load": true,
+          "pretrained_model_state_hook": {
+            "_name_": null
+          },
+          "post_init_hook": {
+            "_name_": null
+          },
+          "layer_decay": {
+            "_name_": null,
+            "decay": 0.7
+          },
+          "track_grad_norms": false,
+          "max_steps": null
+        },
+        "callbacks": {
+          "learning_rate_monitor": {
+            "logging_interval": "epoch"
+          },
+          "timer": {
+            "step": true,
+            "inter_step": false,
+            "epoch": true,
+            "val": true,
+            "_name_": "timer"
+          },
+          "params": {
+            "total": true,
+            "trainable": true,
+            "fixed": true,
+            "_name_": "params"
+          },
+          "model_checkpoint": {
+            "monitor": "val/loss",
+            "mode": "min",
+            "save_top_k": 1,
+            "save_last": true,
+            "auto_insert_metric_name": false,
+            "verbose": true,
+            "_name_": "model_checkpoint"
+          },
+          "rich_model_summary": {
+            "max_depth": 1,
+            "_name_": "rich_model_summary"
+          },
+          "rich_progress_bar": {
+            "refresh_rate": 1,
+            "leave": true,
+            "_name_": "rich_progress_bar"
+          },
+          "early_stopping": {
+            "monitor": "val/loss",
+            "mode": "min",
+            "patience": 50,
+            "min_delta": 0.0001,
+            "_name_": "early_stopping"
+          }
+        },
+        "loss_reduction": "valid-target-mean-v2",
+        "allow_tf32": false
+      },
+      "selection": {
+        "monitor": "val/loss",
+        "mode": "min"
+      },
+      "source_fingerprint": "0e8c268887a4d98c484c4a053326347cae75f74431bec0133577d37ff77ee6fb",
+      "source_domain": {
+        "states": [
+          "Arkansas",
+          "Illinois",
+          "Iowa",
+          "Louisiana",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Wisconsin"
+        ],
+        "target_measure": "legacy_mixed",
+        "duplicate_audit": {
+          "policy": "error",
+          "groups": 0,
+          "rows": 0,
+          "excess_rows": 0,
+          "conflicting_target_groups": 0
+        },
+        "commodity_universe": "all_hs_chapters",
+        "hs2_codes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98"
+        ],
+        "source_start": "2008-01-01",
+        "source_end": "2025-05-01",
+        "grid_start": "2009-01-01",
+        "grid_end": "2025-05-01",
+        "train_end": "2023-12-01",
+        "val_start": "2024-01-01",
+        "val_end": "2024-12-01",
+        "test_start": "2025-01-01",
+        "test_end": "2025-05-01"
+      }
+    },
+    "checkpoint_sha256": "dd81df89934675cb1f08cc284306ed2f0e09d301be77661f38d30c17fb30daa3"
+  },
+  "architecture": {
+    "class": "s4nd",
+    "n_layers": 4,
+    "d_state": 64,
+    "bidirectional": true,
+    "dim": 2
+  },
+  "cohort": {
+    "protocol_version": "train-only-cohort-v1",
+    "benchmark_protocol_version": "fair-comparison-v5",
+    "cohort_from_train_only": true,
+    "num_combos": 918
+  },
+  "data_protocol": {
+    "input_len": 36,
+    "lag_count": 12,
+    "train_target_start": null
+  },
+  "metrics": {
+    "value_mse": 0.03747825066556593,
+    "weight_mse": 0.06298692050086369,
+    "mae": 0.11486567570260245,
+    "value_mae": 0.11691779515526941,
+    "weight_mae": 0.11281355624993548,
+    "rmse": 0.22228247712367027,
+    "value_rmse": 0.19359300262552345,
+    "weight_rmse": 0.25097195162181707,
+    "r2": 0.512379312389009,
+    "value_r2": 0.5869361316393078,
+    "weight_r2": 0.43782249313871036,
+    "value_mape": 126.84123619930301,
+    "weight_mape": 346.6050067849347,
+    "smape": 46.10719990373305,
+    "value_smape": 43.085513822131325,
+    "weight_smape": 49.128885985334776,
+    "norm_mse_combined": 0.05023258558321482,
+    "num_params": 278822,
+    "value_mase": 0.8905833836809725,
+    "weight_mase": 0.8638157537448291,
+    "mase": 0.8771995687129008,
+    "value_rmsse": 0.7320766355497653,
+    "weight_rmsse": 0.6977160170014658,
+    "rmsse": 0.7148963262756156
+  }
+}

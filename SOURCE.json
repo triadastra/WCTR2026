@@ -1,0 +1,45 @@
+{
+  "source_repository": "https://github.com/triadastra/Multidimensional-Demand-Forecasting (private)",
+  "source_commit": "0c43935ac7d32bf212996a3bb1fefb442f43a2d9",
+  "exported_paths": [
+    "src", "config", "scripts", "util", "tests", "ext", "external", "docs", "data",
+    "results/2026-10-26", "setup.py", "requirements.txt", "requirements-benchmark.txt",
+    "requirements-fair-local.txt", "pytest.ini", "LICENSE", ".gitignore", ".gitattributes"
+  ],
+  "exported_files": 3446,
+  "export_command": "git -c core.autocrlf=false archive 0c43935 <exported_paths>",
+  "edited_after_export": {
+    ".gitattributes": "added '* text=auto' and data/ + docs/paper_audit/ to the byte-preserving rules",
+    "docs/EXP3_AUDIT.md": "replaced a link to an unreleased internal note with a link to the results snapshot",
+    "results/2026-10-26/README.md": "the September workbook is not part of this release; wording updated (file is not in the manifest)"
+  },
+  "added_in_release": [
+    "README.md", "SOURCE.json", "CITATION.cff", ".github/workflows/tests.yml",
+    "docs/FINDINGS.md", "docs/paper_audit/", "figures/", "tools/"
+  ],
+  "not_released": [
+    "results.xlsx and other workbooks", "graphs/ and outputs/ (historical, pre-correction)",
+    "internal notes and drafts", "model checkpoints"
+  ],
+  "paper_title": "Multidimensional Demand Forecasting using State Space Models",
+  "paper_venue": "World Conference on Transport Research (WCTR 2026), Toulouse; Transportation Research Procedia",
+  "paper_sha256": "c591053555fcb60e8dea9ed67c7d5795765e83853150bf8fcd64e13ac5091b4e",
+  "dataset": {
+    "path": "data/processed/hs2_monthly_aggregated.csv",
+    "sha256": "585abc646e62283dca0f27854d73d60814cdae6ab64b12e545f7a84f317287fb",
+    "source": "U.S. Census Bureau, USA Trade Online (state-level HS2 vessel trade)"
+  },
+  "results_snapshot": {
+    "path": "results/2026-10-26",
+    "manifest_sha256": "3094b8d0b85dc7405ab026532d6ff5a4cad7712329cff657dc219f653e72f3dd",
+    "manifest_entries": 2502,
+    "entries_shipped_and_verified": 2500,
+    "entries_not_shipped": ["results.xlsx", "results/archive/results-legacy-20260831.xlsx"]
+  },
+  "training_machine_check": {
+    "date": "2026-10-27",
+    "files_matching_manifest": 820,
+    "files_different": 0,
+    "report": "docs/paper_audit/box_verification.md"
+  }
+}

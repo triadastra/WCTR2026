@@ -1,0 +1,406 @@
+item,actual,expected,status
+Figure3 s4|onehot norm_mse_combined,5.353615397780665,5.35,PASS
+Figure3 dagger s4|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 s4|embeddings norm_mse_combined,5.16721564690108,5.17,PASS
+Figure3 dagger s4|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 s4|cross_attention_2d norm_mse_combined,5.930010893494764,5.93,PASS
+Figure3 dagger s4|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 s4|cross_attention_3d norm_mse_combined,6.541626688383106,6.54,PASS
+Figure3 dagger s4|cross_attention_3d norm_mse_combined,1.0,1.0,PASS
+Figure3 s4|cross_attention_4d norm_mse_combined,5.573241915093375,5.57,PASS
+Figure3 dagger s4|cross_attention_4d norm_mse_combined,1.0,1.0,PASS
+Figure3 encoder s4 norm_mse_combined,0.9980344376456822,0.998,PASS
+Figure3 s4|onehot mae,1.2136206919584058,1.21,PASS
+Figure3 dagger s4|onehot mae,0.0,0.0,PASS
+Figure3 s4|embeddings mae,1.123171338287987,1.12,PASS
+Figure3 dagger s4|embeddings mae,0.0,0.0,PASS
+Figure3 s4|cross_attention_2d mae,0.6460881361786797,0.65,PASS
+Figure3 dagger s4|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 s4|cross_attention_3d mae,2.1564763575170343,2.16,PASS
+Figure3 dagger s4|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 s4|cross_attention_4d mae,-0.42563720163908414,-0.43,PASS
+Figure3 dagger s4|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder s4 mae,0.9990852320518907,0.999,PASS
+Figure3 s4_bidir|onehot norm_mse_combined,5.158654983697808,5.16,PASS
+Figure3 dagger s4_bidir|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 s4_bidir|embeddings norm_mse_combined,5.493428820228507,5.49,PASS
+Figure3 dagger s4_bidir|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 s4_bidir|cross_attention_2d norm_mse_combined,6.282445263547343,6.28,PASS
+Figure3 dagger s4_bidir|cross_attention_2d norm_mse_combined,1.0,1.0,PASS
+Figure3 s4_bidir|cross_attention_3d norm_mse_combined,5.868153949116028,5.87,PASS
+Figure3 dagger s4_bidir|cross_attention_3d norm_mse_combined,1.0,1.0,PASS
+Figure3 s4_bidir|cross_attention_4d norm_mse_combined,6.261552936985437,6.26,PASS
+Figure3 dagger s4_bidir|cross_attention_4d norm_mse_combined,1.0,1.0,PASS
+Figure3 encoder s4_bidir norm_mse_combined,1.003542333959973,1.004,PASS
+Figure3 s4_bidir|onehot mae,2.122315584806622,2.12,PASS
+Figure3 dagger s4_bidir|onehot mae,0.0,0.0,PASS
+Figure3 s4_bidir|embeddings mae,2.1450005485068258,2.15,PASS
+Figure3 dagger s4_bidir|embeddings mae,0.0,0.0,PASS
+Figure3 s4_bidir|cross_attention_2d mae,1.3660823356758,1.37,PASS
+Figure3 dagger s4_bidir|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 s4_bidir|cross_attention_3d mae,-0.563132792318366,-0.56,PASS
+Figure3 dagger s4_bidir|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 s4_bidir|cross_attention_4d mae,-0.19938739508404968,-0.2,PASS
+Figure3 dagger s4_bidir|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder s4_bidir mae,1.0002318222249997,1.0,PASS
+Figure3 mamba|onehot norm_mse_combined,3.4970948204511187,3.5,PASS
+Figure3 dagger mamba|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba|embeddings norm_mse_combined,4.066634069888164,4.07,PASS
+Figure3 dagger mamba|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba|cross_attention_2d norm_mse_combined,4.940189865875199,4.94,PASS
+Figure3 dagger mamba|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba|cross_attention_3d norm_mse_combined,4.599763882810082,4.6,PASS
+Figure3 dagger mamba|cross_attention_3d norm_mse_combined,1.0,1.0,PASS
+Figure3 mamba|cross_attention_4d norm_mse_combined,5.1534177400500925,5.15,PASS
+Figure3 dagger mamba|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder mamba norm_mse_combined,1.0059368212916866,1.006,PASS
+Figure3 mamba|onehot mae,1.3809990401661087,1.38,PASS
+Figure3 dagger mamba|onehot mae,0.0,0.0,PASS
+Figure3 mamba|embeddings mae,0.595152221024986,0.6,PASS
+Figure3 dagger mamba|embeddings mae,0.0,0.0,PASS
+Figure3 mamba|cross_attention_2d mae,1.2392722435107473,1.24,PASS
+Figure3 dagger mamba|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 mamba|cross_attention_3d mae,-0.7535846790833078,-0.75,PASS
+Figure3 dagger mamba|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 mamba|cross_attention_4d mae,0.28584188007141353,0.29,PASS
+Figure3 dagger mamba|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder mamba mae,0.9920944819422848,0.992,PASS
+Figure3 mamba_nd|cross_attention_2d norm_mse_combined,4.133186581713089,4.13,PASS
+Figure3 dagger mamba_nd|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba_nd|cross_attention_3d norm_mse_combined,4.375196233206813,4.38,PASS
+Figure3 dagger mamba_nd|cross_attention_3d norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba_nd|cross_attention_4d norm_mse_combined,4.236113609302549,4.24,PASS
+Figure3 dagger mamba_nd|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 mamba_nd|cross_attention_2d mae,-0.5460607202717238,-0.55,PASS
+Figure3 dagger mamba_nd|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 mamba_nd|cross_attention_3d mae,2.9296798114569644,2.93,PASS
+Figure3 dagger mamba_nd|cross_attention_3d mae,1.0,1.0,PASS
+Figure3 mamba_nd|cross_attention_4d mae,2.3165773443753146,2.32,PASS
+Figure3 dagger mamba_nd|cross_attention_4d mae,1.0,1.0,PASS
+Figure3 s4nd|2d norm_mse_combined,4.302804866123489,4.3,PASS
+Figure3 dagger s4nd|2d norm_mse_combined,0.0,0.0,PASS
+Figure3 s4nd|3d norm_mse_combined,3.8875026563097492,3.89,PASS
+Figure3 dagger s4nd|3d norm_mse_combined,0.0,0.0,PASS
+Figure3 s4nd|4d norm_mse_combined,3.8642447404648506,3.86,PASS
+Figure3 dagger s4nd|4d norm_mse_combined,0.0,0.0,PASS
+Figure3 s4nd|2d mae,1.0126773811776624,1.01,PASS
+Figure3 dagger s4nd|2d mae,0.0,0.0,PASS
+Figure3 s4nd|3d mae,1.4045655260233492,1.4,PASS
+Figure3 dagger s4nd|3d mae,0.0,0.0,PASS
+Figure3 s4nd|4d mae,0.3290419453670035,0.33,PASS
+Figure3 dagger s4nd|4d mae,0.0,0.0,PASS
+Figure3 transformer|onehot norm_mse_combined,4.57373152202234,4.57,PASS
+Figure3 dagger transformer|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 transformer|embeddings norm_mse_combined,4.277762752380976,4.28,PASS
+Figure3 dagger transformer|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 transformer|cross_attention_2d norm_mse_combined,3.615407805617754,3.62,PASS
+Figure3 dagger transformer|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 transformer|cross_attention_3d norm_mse_combined,2.1470515684964497,2.15,PASS
+Figure3 dagger transformer|cross_attention_3d norm_mse_combined,0.0,0.0,PASS
+Figure3 transformer|cross_attention_4d norm_mse_combined,2.355815152970153,2.36,PASS
+Figure3 dagger transformer|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder transformer norm_mse_combined,0.9969080458402185,0.997,PASS
+Figure3 transformer|onehot mae,2.0315384129140024,2.03,PASS
+Figure3 dagger transformer|onehot mae,0.0,0.0,PASS
+Figure3 transformer|embeddings mae,2.7266855990319416,2.73,PASS
+Figure3 dagger transformer|embeddings mae,1.0,1.0,PASS
+Figure3 transformer|cross_attention_2d mae,0.25593975670039626,0.26,PASS
+Figure3 dagger transformer|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 transformer|cross_attention_3d mae,-1.0119044846127245,-1.01,PASS
+Figure3 dagger transformer|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 transformer|cross_attention_4d mae,-0.905595841289597,-0.91,PASS
+Figure3 dagger transformer|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder transformer mae,1.007146329806883,1.007,PASS
+Figure3 gpt|onehot norm_mse_combined,2.9946567941963598,2.99,PASS
+Figure3 dagger gpt|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 gpt|embeddings norm_mse_combined,3.8496086860050904,3.85,PASS
+Figure3 dagger gpt|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 gpt|cross_attention_2d norm_mse_combined,3.2172578441735267,3.22,PASS
+Figure3 dagger gpt|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 gpt|cross_attention_3d norm_mse_combined,2.414103604617168,2.41,PASS
+Figure3 dagger gpt|cross_attention_3d norm_mse_combined,0.0,0.0,PASS
+Figure3 gpt|cross_attention_4d norm_mse_combined,2.2057581114502844,2.21,PASS
+Figure3 dagger gpt|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder gpt norm_mse_combined,1.0088918191608471,1.009,PASS
+Figure3 gpt|onehot mae,0.41025145385744644,0.41,PASS
+Figure3 dagger gpt|onehot mae,0.0,0.0,PASS
+Figure3 gpt|embeddings mae,2.1778025929532263,2.18,PASS
+Figure3 dagger gpt|embeddings mae,0.0,0.0,PASS
+Figure3 gpt|cross_attention_2d mae,-0.053687320427942,-0.05,PASS
+Figure3 dagger gpt|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 gpt|cross_attention_3d mae,-1.1712346864987566,-1.17,PASS
+Figure3 dagger gpt|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 gpt|cross_attention_4d mae,-0.6749523786128808,-0.67,PASS
+Figure3 dagger gpt|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder gpt mae,1.018069018954265,1.018,PASS
+Figure3 lstm|onehot norm_mse_combined,4.414905890031973,4.41,PASS
+Figure3 dagger lstm|onehot norm_mse_combined,1.0,1.0,PASS
+Figure3 lstm|embeddings norm_mse_combined,5.0466340427689165,5.05,PASS
+Figure3 dagger lstm|embeddings norm_mse_combined,1.0,1.0,PASS
+Figure3 lstm|cross_attention_2d norm_mse_combined,4.105452023979971,4.11,PASS
+Figure3 dagger lstm|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 lstm|cross_attention_3d norm_mse_combined,1.4079247844126508,1.41,PASS
+Figure3 dagger lstm|cross_attention_3d norm_mse_combined,0.0,0.0,PASS
+Figure3 lstm|cross_attention_4d norm_mse_combined,0.6736634740327707,0.67,PASS
+Figure3 dagger lstm|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder lstm norm_mse_combined,1.0066530359020813,1.007,PASS
+Figure3 lstm|onehot mae,2.6783113378787693,2.68,PASS
+Figure3 dagger lstm|onehot mae,1.0,1.0,PASS
+Figure3 lstm|embeddings mae,4.079736805808287,4.08,PASS
+Figure3 dagger lstm|embeddings mae,1.0,1.0,PASS
+Figure3 lstm|cross_attention_2d mae,2.1810594987858867,2.18,PASS
+Figure3 dagger lstm|cross_attention_2d mae,0.0,0.0,PASS
+Figure3 lstm|cross_attention_3d mae,1.3514941776282208,1.35,PASS
+Figure3 dagger lstm|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 lstm|cross_attention_4d mae,-0.5363032049407135,-0.54,PASS
+Figure3 dagger lstm|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder lstm mae,1.0146103171661687,1.015,PASS
+Figure3 gru|onehot norm_mse_combined,4.680296293312969,4.68,PASS
+Figure3 dagger gru|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 gru|embeddings norm_mse_combined,3.7995205697880285,3.8,PASS
+Figure3 dagger gru|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 gru|cross_attention_2d norm_mse_combined,4.37170036750445,4.37,PASS
+Figure3 dagger gru|cross_attention_2d norm_mse_combined,0.0,0.0,PASS
+Figure3 gru|cross_attention_3d norm_mse_combined,2.827287327815442,2.83,PASS
+Figure3 dagger gru|cross_attention_3d norm_mse_combined,0.0,0.0,PASS
+Figure3 gru|cross_attention_4d norm_mse_combined,1.5084317044354756,1.51,PASS
+Figure3 dagger gru|cross_attention_4d norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder gru norm_mse_combined,0.9908443728270201,0.991,PASS
+Figure3 gru|onehot mae,2.127800126317958,2.13,PASS
+Figure3 dagger gru|onehot mae,0.0,0.0,PASS
+Figure3 gru|embeddings mae,2.4361095799975363,2.44,PASS
+Figure3 dagger gru|embeddings mae,1.0,1.0,PASS
+Figure3 gru|cross_attention_2d mae,2.845189152496863,2.85,PASS
+Figure3 dagger gru|cross_attention_2d mae,1.0,1.0,PASS
+Figure3 gru|cross_attention_3d mae,1.6234117213523303,1.62,PASS
+Figure3 dagger gru|cross_attention_3d mae,0.0,0.0,PASS
+Figure3 gru|cross_attention_4d mae,0.4403506730391249,0.44,PASS
+Figure3 dagger gru|cross_attention_4d mae,0.0,0.0,PASS
+Figure3 encoder gru mae,1.0031600774871967,1.003,PASS
+Figure3 xgboost|onehot norm_mse_combined,0.6705739529798138,0.67,PASS
+Figure3 dagger xgboost|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 xgboost|embeddings norm_mse_combined,0.10666237207164198,0.11,PASS
+Figure3 dagger xgboost|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder xgboost norm_mse_combined,0.9943548629538381,0.994,PASS
+Figure3 xgboost|onehot mae,2.8806198695927265,2.88,PASS
+Figure3 dagger xgboost|onehot mae,1.0,1.0,PASS
+Figure3 xgboost|embeddings mae,2.795999538217797,2.8,PASS
+Figure3 dagger xgboost|embeddings mae,1.0,1.0,PASS
+Figure3 encoder xgboost mae,0.9991294562880857,0.999,PASS
+Figure3 lightgbm|onehot norm_mse_combined,-0.19896213770820292,-0.2,PASS
+Figure3 dagger lightgbm|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 lightgbm|embeddings norm_mse_combined,0.18383337179394,0.18,PASS
+Figure3 dagger lightgbm|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder lightgbm norm_mse_combined,1.0038350051142315,1.004,PASS
+Figure3 lightgbm|onehot mae,2.504952635626978,2.5,PASS
+Figure3 dagger lightgbm|onehot mae,0.0,0.0,PASS
+Figure3 lightgbm|embeddings mae,3.0177224702523597,3.02,PASS
+Figure3 dagger lightgbm|embeddings mae,1.0,1.0,PASS
+Figure3 encoder lightgbm mae,1.005287252967101,1.005,PASS
+Figure3 random_forest|onehot norm_mse_combined,-0.7048982891809219,-0.7,PASS
+Figure3 dagger random_forest|onehot norm_mse_combined,0.0,0.0,PASS
+Figure3 random_forest|embeddings norm_mse_combined,-0.728739157367686,-0.73,PASS
+Figure3 dagger random_forest|embeddings norm_mse_combined,0.0,0.0,PASS
+Figure3 encoder random_forest norm_mse_combined,0.9997633161261997,1.0,PASS
+Figure3 random_forest|onehot mae,0.10388138901116228,0.1,PASS
+Figure3 dagger random_forest|onehot mae,0.0,0.0,PASS
+Figure3 random_forest|embeddings mae,-0.004887128844188737,-0.0,PASS
+Figure3 dagger random_forest|embeddings mae,0.0,0.0,PASS
+Figure3 encoder random_forest mae,0.9989123679754249,0.999,PASS
+Figure2 lstm 6 6,4.967915675530543,4.968,PASS
+Figure2 lstm 6 12,4.957044905747797,4.957,PASS
+Figure2 lstm 6 24,4.921587753707598,4.922,PASS
+Figure2 lstm 6 36,4.947008769913297,4.947,PASS
+Figure2 lstm 12 6,4.955401447686022,4.955,PASS
+Figure2 lstm 12 12,4.946284926512292,4.946,PASS
+Figure2 lstm 12 24,4.93427538050037,4.934,PASS
+Figure2 lstm 12 36,4.952252867896395,4.952,PASS
+Figure2 lstm 24 6,4.951332062142355,4.951,PASS
+Figure2 lstm 24 12,4.940588776596793,4.941,PASS
+Figure2 lstm 24 24,4.946457081333844,4.947,FAIL
+Figure2 lstm 24 36,4.957716061810655,4.958,PASS
+Figure2 lstm 36 6,4.974920847282568,4.975,PASS
+Figure2 lstm 36 12,4.949038346530621,4.949,PASS
+Figure2 lstm 36 24,4.948366603370342,4.948,PASS
+Figure2 lstm 36 36,4.963814736120799,4.964,PASS
+Figure2 transformer 6 6,4.9282622576326345,4.928,PASS
+Figure2 transformer 6 12,4.9205399721859,4.92,FAIL
+Figure2 transformer 6 24,4.888507803203837,4.888,FAIL
+Figure2 transformer 6 36,4.934087513748922,4.934,PASS
+Figure2 transformer 12 6,4.906890671608905,4.907,PASS
+Figure2 transformer 12 12,4.890417642973973,4.89,PASS
+Figure2 transformer 12 24,4.896303261873234,4.896,PASS
+Figure2 transformer 12 36,4.935812110625782,4.936,PASS
+Figure2 transformer 24 6,4.886296467465468,4.886,PASS
+Figure2 transformer 24 12,4.866535222673091,4.867,PASS
+Figure2 transformer 24 24,4.926849604657383,4.927,PASS
+Figure2 transformer 24 36,4.918108165754165,4.918,PASS
+Figure2 transformer 36 6,4.9046304037029556,4.905,PASS
+Figure2 transformer 36 12,4.901839824653228,4.902,PASS
+Figure2 transformer 36 24,4.869852531511657,4.87,PASS
+Figure2 transformer 36 36,4.897451197674057,4.897,PASS
+Figure2 s4 6 6,4.923033973016818,4.923,PASS
+Figure2 s4 6 12,4.918817644578872,4.919,PASS
+Figure2 s4 6 24,4.888723703878446,4.889,PASS
+Figure2 s4 6 36,4.915922137123995,4.916,PASS
+Figure2 s4 12 6,4.894186585833215,4.894,PASS
+Figure2 s4 12 12,4.885051297725701,4.885,PASS
+Figure2 s4 12 24,4.909808310815933,4.91,PASS
+Figure2 s4 12 36,4.919051459282631,4.919,PASS
+Figure2 s4 24 6,4.873640797027899,4.874,PASS
+Figure2 s4 24 12,4.901125622902945,4.901,PASS
+Figure2 s4 24 24,4.92397301736369,4.924,PASS
+Figure2 s4 24 36,4.906513966974675,4.906,FAIL
+Figure2 s4 36 6,4.919373897892579,4.919,PASS
+Figure2 s4 36 12,4.903138656905604,4.903,PASS
+Figure2 s4 36 24,4.900173773500538,4.9,PASS
+Figure2 s4 36 36,4.882056460647507,4.882,PASS
+Figure2 s4_bidir 6 6,4.922088430314701,4.922,PASS
+Figure2 s4_bidir 6 12,4.9248701991309725,4.925,PASS
+Figure2 s4_bidir 6 24,4.897921230940206,4.898,PASS
+Figure2 s4_bidir 6 36,4.93020297733279,4.93,PASS
+Figure2 s4_bidir 12 6,4.907843725351174,4.908,PASS
+Figure2 s4_bidir 12 12,4.899047374271148,4.899,PASS
+Figure2 s4_bidir 12 24,4.9104865120165115,4.91,PASS
+Figure2 s4_bidir 12 36,4.931741598407738,4.932,PASS
+Figure2 s4_bidir 24 6,4.879998967796401,4.88,PASS
+Figure2 s4_bidir 24 12,4.9097383446429665,4.91,PASS
+Figure2 s4_bidir 24 24,4.909295236423853,4.909,PASS
+Figure2 s4_bidir 24 36,4.897032174110932,4.897,PASS
+Figure2 s4_bidir 36 6,4.913282460355703,4.913,PASS
+Figure2 s4_bidir 36 12,4.912959985321882,4.913,PASS
+Figure2 s4_bidir 36 24,4.901012896664481,4.901,PASS
+Figure2 s4_bidir 36 36,4.8807994876983205,4.881,PASS
+initial combinations,1542.0,1542.0,PASS
+cohort,918.0,918.0,PASS
+months,197.0,197.0,PASS
+commodities,93.0,93.0,PASS
+density percent,61.693548387096776,61.7,PASS
+source test identity,1.0,1.0,PASS
+source normalized truth Value,1.8603421114704588e-07,0.0,PASS
+source normalized truth Weight,4.5856392638654597e-07,0.0,PASS
+Independent MASE s4 cross_attention_3d,0.8623603407949147,0.8623603407949147,PASS
+Independent MASE transformer film_attention,0.8412417662670953,0.8412417662670956,PASS
+Independent MASE lstm embeddings,0.8301524075428964,0.8301524075428963,PASS
+Independent MASE xgboost onehot,0.8430621029465314,0.8430621029465314,PASS
+Independent MASE moving_average none,0.8620182477162454,0.8620182477162452,PASS
+BH mse s4 cross_attention_3d,0.151875,0.151875,PASS
+BH mse s4_bidir cross_attention_2d,0.151875,0.151875,PASS
+BH mse s4_bidir cross_attention_4d,0.151875,0.151875,PASS
+BH mse s4 cross_attention_2d,0.151875,0.151875,PASS
+BH mse s4_bidir cross_attention_3d,0.151875,0.151875,PASS
+BH mse s4 cross_attention_4d,0.151875,0.151875,PASS
+BH mse s4_bidir embeddings,0.151875,0.151875,PASS
+BH mse s4 onehot,0.151875,0.151875,PASS
+BH mse s4 embeddings,0.151875,0.151875,PASS
+BH mse s4_bidir onehot,0.151875,0.151875,PASS
+BH mse mamba cross_attention_4d,0.151875,0.151875,PASS
+BH mse lstm embeddings,0.151875,0.151875,PASS
+BH mse transformer film_attention,0.151875,0.151875,PASS
+BH mse mamba cross_attention_2d,0.151875,0.151875,PASS
+BH mse gru onehot,0.151875,0.151875,PASS
+BH mse mamba cross_attention_3d,0.151875,0.151875,PASS
+BH mse transformer onehot,0.151875,0.151875,PASS
+BH mse gru cross_attention,0.151875,0.151875,PASS
+BH mse lstm onehot,0.151875,0.151875,PASS
+BH mse mamba_nd cross_attention_3d,0.151875,0.151875,PASS
+BH mse gru cross_attention_2d,0.151875,0.151875,PASS
+BH mse s4nd 2d,0.151875,0.151875,PASS
+BH mse transformer embeddings,0.151875,0.151875,PASS
+BH mse mamba_nd cross_attention_4d,0.18911637931034483,0.1891163793103448,PASS
+BH mse transformer cross_attention,0.18911637931034483,0.1891163793103448,PASS
+BH mse s4nd 2d_state,0.1905241935483871,0.1905241935483871,PASS
+BH mse mamba_nd cross_attention_2d,0.18911637931034483,0.1891163793103448,PASS
+BH mse lstm cross_attention_2d,0.151875,0.151875,PASS
+BH mse lstm cross_attention,0.151875,0.151875,PASS
+BH mse mamba embeddings,0.24107142857142858,0.2410714285714285,PASS
+BH mse s4nd 3d,0.2109375,0.2109375,PASS
+BH mse s4nd 4d,0.24107142857142858,0.2410714285714285,PASS
+BH mse gpt embeddings,0.1622596153846154,0.1622596153846154,PASS
+BH mse gru embeddings,0.24609375,0.24609375,PASS
+BH mse transformer cross_attention_2d,0.1905241935483871,0.1905241935483871,PASS
+BH mse mamba onehot,0.2964527027027027,0.2964527027027027,PASS
+BH mse gpt cross_attention_2d,0.24107142857142858,0.2410714285714285,PASS
+BH mse gpt onehot,0.29975328947368424,0.2997532894736842,PASS
+BH mse gru cross_attention_3d,0.3245192307692308,0.3245192307692308,PASS
+BH mse gpt cross_attention_3d,0.3515625,0.3515625,PASS
+BH mse transformer cross_attention_4d,0.34984756097560976,0.3498475609756097,PASS
+BH mse gpt cross_attention_4d,0.3375,0.3375,PASS
+BH mse transformer cross_attention_3d,0.4120639534883721,0.4120639534883721,PASS
+BH mse gru cross_attention_4d,0.5848721590909091,0.5848721590909091,PASS
+BH mse lstm film_attention,0.6642287234042553,0.6642287234042553,PASS
+BH mse lstm cross_attention_3d,0.641983695652174,0.641983695652174,PASS
+BH mse gru film_attention,0.641983695652174,0.641983695652174,PASS
+BH mse lstm cross_attention_4d,0.87890625,0.87890625,PASS
+BH mse xgboost onehot,0.8954081632653061,0.8954081632653061,PASS
+BH mse lightgbm embeddings,0.984375,0.984375,PASS
+BH mse xgboost embeddings,0.9790683962264151,0.9790683962264152,PASS
+BH mse lightgbm onehot,0.9790683962264151,0.9790683962264152,PASS
+BH mse random_forest onehot,0.9512867647058824,0.9512867647058824,PASS
+BH mse random_forest embeddings,0.9512867647058824,0.9512867647058824,PASS
+BH mae lstm embeddings,0.084375,0.084375,PASS
+BH mae transformer film_attention,0.158203125,0.158203125,PASS
+BH mae lightgbm embeddings,0.084375,0.084375,PASS
+BH mae mamba_nd cross_attention_3d,0.158203125,0.158203125,PASS
+BH mae xgboost onehot,0.19176136363636365,0.1917613636363636,PASS
+BH mae gru cross_attention_2d,0.158203125,0.158203125,PASS
+BH mae xgboost embeddings,0.084375,0.084375,PASS
+BH mae transformer embeddings,0.084375,0.084375,PASS
+BH mae lstm onehot,0.084375,0.084375,PASS
+BH mae lightgbm onehot,0.24816176470588236,0.2481617647058823,PASS
+BH mae gru embeddings,0.19176136363636365,0.1917613636363636,PASS
+BH mae mamba_nd cross_attention_4d,0.19176136363636365,0.1917613636363636,PASS
+BH mae lstm cross_attention_2d,0.2109375,0.2109375,PASS
+BH mae gpt embeddings,0.24816176470588236,0.2481617647058823,PASS
+BH mae s4 cross_attention_3d,0.24816176470588236,0.2481617647058823,PASS
+BH mae s4_bidir embeddings,0.375,0.375,PASS
+BH mae gru onehot,0.2109375,0.2109375,PASS
+BH mae s4_bidir onehot,0.3796875,0.3796875,PASS
+BH mae transformer onehot,0.2109375,0.2109375,PASS
+BH mae transformer cross_attention,0.5625,0.5625,PASS
+BH mae gru cross_attention_3d,0.4017857142857143,0.4017857142857143,PASS
+BH mae s4nd 3d,0.3796875,0.3796875,PASS
+BH mae mamba onehot,0.5987903225806451,0.5987903225806451,PASS
+BH mae s4_bidir cross_attention_2d,0.5987903225806451,0.5987903225806451,PASS
+BH mae lstm cross_attention_3d,0.5625,0.5625,PASS
+BH mae mamba cross_attention_2d,0.5625,0.5625,PASS
+BH mae s4 onehot,0.6700367647058824,0.6700367647058824,PASS
+BH mae s4 embeddings,0.759375,0.759375,PASS
+BH mae s4nd 2d_state,0.5987903225806451,0.5987903225806451,PASS
+BH mae s4nd 2d,0.5725446428571429,0.5725446428571429,PASS
+BH mae s4 cross_attention_2d,0.8665540540540541,0.8665540540540541,PASS
+BH mae mamba embeddings,0.8731831395348837,0.8731831395348837,PASS
+BH mae gru cross_attention_4d,0.8731831395348837,0.8731831395348837,PASS
+BH mae gpt onehot,0.8731831395348837,0.8731831395348837,PASS
+BH mae lstm cross_attention,0.8821022727272727,0.8821022727272727,PASS
+BH mae s4nd 4d,0.890625,0.890625,PASS
+BH mae mamba cross_attention_4d,0.931640625,0.931640625,PASS
+BH mae gru cross_attention,0.9171195652173914,0.9171195652173914,PASS
+BH mae transformer cross_attention_2d,0.931640625,0.931640625,PASS
+BH mae gru film_attention,0.9365625,0.9365625,PASS
+BH mae random_forest onehot,0.9678308823529411,0.9678308823529412,PASS
+BH mae lstm film_attention,0.9949882075471698,0.9949882075471698,PASS
+BH mae random_forest embeddings,1.0,1.0,PASS
+BH mae gpt cross_attention_2d,0.9816706730769231,0.9816706730769232,PASS
+BH mae s4_bidir cross_attention_4d,0.9365625,0.9365625,PASS
+BH mae s4 cross_attention_4d,0.8731831395348837,0.8731831395348837,PASS
+BH mae lstm cross_attention_4d,0.8731831395348837,0.8731831395348837,PASS
+BH mae mamba_nd cross_attention_2d,0.8731831395348837,0.8731831395348837,PASS
+BH mae s4_bidir cross_attention_3d,0.85546875,0.85546875,PASS
+BH mae gpt cross_attention_4d,0.6328125,0.6328125,PASS
+BH mae mamba cross_attention_3d,0.6647727272727273,0.6647727272727273,PASS
+BH mae transformer cross_attention_4d,0.5725446428571429,0.5725446428571429,PASS
+BH mae transformer cross_attention_3d,0.5679086538461539,0.5679086538461539,PASS
+BH mae gpt cross_attention_3d,0.5679086538461539,0.5679086538461539,PASS
+Figure4 lstm rank1 Weight,16.41945822643623,16.0,PASS
+Figure4 lstm rank2 Value,15.720798950472012,16.0,PASS
+Figure4 lstm rank3 value_lag_1,7.3913861612536085,7.0,PASS
+Figure4 lstm rank4 weight_lag_1,6.188945832939627,6.0,PASS
+Figure4 lstm rank5 other states,4.93841660188051,5.0,PASS
+SHAP dollars lstm,3380463.8720180043,3400000.0,PASS
+Figure4 s4 rank1 Weight,13.710795131752429,14.0,PASS
+Figure4 s4 rank2 Value,11.615855619052239,12.0,PASS
+Figure4 s4 rank3 value_lag_1,7.08246948221446,7.0,PASS
+Figure4 s4 rank4 weight_lag_1,6.524774273945185,7.0,PASS
+Figure4 s4 rank5 cos_month,5.005187069659205,5.0,PASS
+SHAP dollars s4,4173070.642932494,4200000.0,PASS

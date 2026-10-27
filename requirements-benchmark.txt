@@ -1,0 +1,17 @@
+# Full benchmark runtime, including the upstream S4 training harness.
+-r requirements.txt
+# The upstream S4 dataloader defines image collators during import, even for
+# forecasting; match the pinned torch 2.9.1 wheel rather than relying on it
+# being preinstalled in a developer environment.
+torchvision==0.24.1
+# Match external/s4/requirements.txt; 1.9 rejects strategy=auto.
+pytorch-lightning==2.0.4
+# Lightning 2.0.4 imports pkg_resources; newer setuptools removed it.
+setuptools<81
+torchmetrics==0.11.4
+lightning-utilities==0.14.3
+hydra-core==1.3.2
+omegaconf==2.3.0
+wandb==0.18.0
+rich>=10.2.2
+openpyxl>=3.1
