@@ -141,6 +141,7 @@ The regular `python -m pytest -q` suite runs in the benchmark environment, inclu
 - **Recomputation:** all 769 runs behind the paper were re-derived from their predictions. Every stored metric agrees within 1e-14. MASE was rebuilt from the raw dataset, and every significance test with an independent implementation.
 - **Paper check:** [docs/paper_audit/](docs/paper_audit/) compares all 424 numbers and claims in the submitted paper with the recomputed evidence: **408 supported**. Every value in Tables 1–2 and Figs. 1 and 4, and every dagger and encoder ratio, reproduces. Corrections are listed below.
 - **Training-machine copy:** a fresh copy of the October runs taken from the training machine on 27 October 2026 matched the manifest byte-for-byte (820 of 820 files).
+- **Tests:** on GitHub Actions (Ubuntu, Python 3.11, CPU), the suite passes with **769 tests and 3 skipped**. The same workflow re-verifies the manifest and rebuilds the claim ledger from the saved runs.
 - **Earlier audit:** the snapshot's own numerical audit is in [`results/2026-10-26/audit/AUDIT.md`](results/2026-10-26/audit/AUDIT.md).
 
 These checks establish that the saved results are internally consistent and correctly reported. They are not a fresh training run.
